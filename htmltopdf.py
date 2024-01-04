@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 
 day = {0:'روز اول' , 1: 'روز دوم' , 2:'روز سوم'  , 3:'روز چهارم'  , 4:"روز پنجم"}
-physical_activity = {'بی تحرک':(0 , 'Beginner') , 'بسیار فعال' : (2 , 'Advanced'), 'نسبتا فعال' : (1 , 'Intermediate') , 'کم تحرک':(1 , 'Intermediate')}
+person_level = {'بی تحرک':('Beginner' , 'Beginner') , 'بسیار فعال' : ('Beginner' , 'Intermediate' , 'Advanced' , 'Advanced'), 'نسبتا فعال' : ('Beginner' , 'Intermediate' , 'Intermediate') , 'کم تحرک':('Beginner' , 'Intermediate' , 'Intermediate') , 'بیش از حد فعال':('Intermediate' , 'Intermediate' , 'Advanced' , 'Advanced')}
 kind = {0:"Cardio" ,1 : 'Core' , 2: 'Balance', 3: 'Whole body' , 4: 'Strengthing' , 5: 'Stretching'}
 
 #physical_activity = {"مقدار تحرک":(listindex , level)}
@@ -51,18 +51,14 @@ for person in data:
     bmichange =  soup.find('p' , {'id':'BMI-content'}).find(text=re.compile(r'\d+')).replace_with(bmi)
 
 
-    try:
-        ind_pr = physical_activity[str(data[str(person)]['میزان فعالیت'])][0]
-        level = physical_activity[str(data[str(person)]['میزان فعالیت'])][1]
-    except KeyError:
-        ind_pr = physical_activity['نسبتا فعال'][0]
-        level = physical_activity['نسبتا فعال'][1]
+    each_day_level = person_level[data[str(person)]['میزان فعالیت']]
 
-    exc_program = data[str(person)]['Program'][ind_pr]
-    for i in range(5):
+    exc_program = data[str(person)]['Program']
+    for i in range(len(exc_program)):
+        level = each_day_level[i]
         #merging all type of exercises in one list which contains some tuples 
         #whose first element is the name of exercise and the second one is a tuple of image addresses
-        exercises = [e for k in exc_program for e in k] 
+        exercises = [e for k in exc_program for e1 in k for e in e1] 
         day_num = day[i]
         #making table tage
         table = BeautifulSoup('<div class="divide-y divide-gray-300"></div>' , 'html.parser')
@@ -102,16 +98,17 @@ for person in data:
             tempor = row.find('span' , {'id':'exercise-name'}).find(text=re.compile(r'.+')).replace_with(str(exercise[0]))
 
             #finding the kind of the exercise
-            for l in range(0 , len(exc_program)):
-                if exercise in exc_program[l]:
-                    kind_of_exercise = kind[l]
-                    break
+            for l in range(len(exc_program)):
+                for j in range(len(exc_program[l])):
+                    if exercise in exc_program[l][j]:
+                        kind_of_exercise = kind[l]
+                        break
 
 
             all_str_img_tags = ''
             if len(exercise[1]) > 0:
                 for i in exercise[1]:
-                    str_img_tag = make_img_tag(f'../Fitness/{kind_of_exercise}/{level}/' + str(i))
+                    str_img_tag = make_img_tag(f'../{kind_of_exercise}/{level}/' + str(i))
                     all_str_img_tags += str_img_tag
             else:
                 all_str_img_tags = make_img_tag('./src/images/Exercise.jpg')
