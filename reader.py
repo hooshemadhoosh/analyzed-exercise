@@ -2,7 +2,7 @@ import pandas as pd
 import pickle
 from os import listdir
 import random
-kind = {'A':"cardio" , 'B' : 'core' , 'C': 'balance', 'D': 'whole body' , 'E': 'strengthing' , 'F': 'stretching'}
+kind = {'A':"Cardio" , 'B' : 'Core' , 'C': 'Balance', 'D': 'Whole body' , 'E': 'Strengthing' , 'F': 'Stretching'}
 level = ['Beginner','Intermediate','Advanced']
 program = {"Thin":['1A1B1C1D3E1F','2A2B1C1D4E2F','3A3B1C1D5E3F'],
            "Fat":['3A1B1C1D1E1F','5A1B1C1D2E2F','7A2B1C1D2E3F'],
