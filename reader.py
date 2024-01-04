@@ -2,14 +2,14 @@ import pandas as pd
 import pickle
 from os import listdir
 import random
-kind = {'A':"Whole body"}
+kind = {'A':"cardio" , 'B' : 'core' , 'C': 'balance', 'D': 'whole body' , 'E': 'strengthing' , 'F': 'stretching'}
 level = ['Beginner','Intermediate','Advanced']
-# program = {"Thin":['1A1B1C1D3E1F','2A2B1C1D4E2F','3A3B1C1D5E3F'],
-#            "Fat":['3A1B1C1D1E1F','5A1B1C1D2E2F','7A2B1C1D2E3F'],
-#            "Normal":['2A1B1C1D2E1F','3A2B1C1D3E2F','4A2B2C1D4E3F']}
-program = {"Thin":['1A','2A','3A'],
-           "Fat":['3A2A','5A1A','7A3A'],
-           "Normal":['2A3A','3A1A','4A2A']}
+program = {"Thin":['1A1B1C1D3E1F','2A2B1C1D4E2F','3A3B1C1D5E3F'],
+           "Fat":['3A1B1C1D1E1F','5A1B1C1D2E2F','7A2B1C1D2E3F'],
+           "Normal":['2A1B1C1D2E1F','3A2B1C1D3E2F','4A2B2C1D4E3F']}
+#program = {"Thin":['1A','2A','3A'],
+#           "Fat":['3A2A','5A1A','7A3A'],
+#           "Normal":['2A3A','3A1A','4A2A']}
 def save_object(obj,filename):
     try:
         with open(filename, "wb") as f:
