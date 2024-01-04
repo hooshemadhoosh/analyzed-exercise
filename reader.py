@@ -9,7 +9,7 @@ level = ['Beginner','Intermediate','Advanced']
 #            "Normal":['2A1B1C1D2E1F','3A2B1C1D3E2F','4A2B2C1D4E3F']}
 program = {"Thin":['1A','2A','3A'],
            "Fat":['3A2A','5A1A','7A3A'],
-           "Normal":['2A','3A','4A']}
+           "Normal":['2A3A','3A1A','4A2A']}
 def save_object(obj,filename):
     try:
         with open(filename, "wb") as f:
@@ -24,7 +24,7 @@ def load_object(filename):
         print("Error during unpickling object (Possibly unsupported):", ex)
 def get_exercise_names(dir0):
     print(dir0)
-    file = pd.read_csv(dir0+'dictionary.csv',encoding='ISO-8859-6')
+    file = pd.read_csv(dir0+'dictionary.csv',encoding='UTF-8')
     dictionary = {str(file['code'][i]):file['name'][i] for i in range(len(file['code']))}
     names = [name for name in listdir(dir0) if name.endswith('.jpg')]
     result = {key:[] for key in dictionary}
@@ -53,9 +53,17 @@ def get_programs(bmi):
 
 
 
-file = pd.read_csv('info.csv')
-print(file)
-data = {file['ID'][i]:{'BMI':file['BMI'][i]} for i in range(len(file['ID'])) }
+file = pd.read_excel('excel.xlsx',1)
+data = {f"{file['gender'][i]} {file['name'][i]} {file['family'][i]}":{name:file[name][i] for name in file.columns} for i in range(len(file['BMI']))}
+for key,value in data.items():
+    value['BMI_VALUE'] = value['BMI']
+    if value['BMI']<18.5:
+        value['BMI']='Thin'
+    elif 18.5<value['BMI']<25:
+        value['BMI']='Normal'
+    else:
+        value['BMI']='Fat'
+    data[key]=value
 for key,value in data.items():
     temp = value
     temp['Program']=get_programs(value['BMI'])
