@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sport Program
+  </title>
+  <link href="./src/css/output.css" rel="stylesheet"/>
+ </head>
+ <body dir="rtl">
+  <section class="pt-6">
+   <div class="container">
+    <!-- Information -->
+    <div class="mb-4">
+     <div class="flex justify-center items-center gap-x-8 mb-2 text-sm">
+      <div class="space-y-2">
+       <p class="text-center">
+        سن
+       </p>
+       <p class="text-center" id="age-content">
+        24
+       </p>
+      </div>
+      <div class="space-y-2">
+       <p class="text-center">
+        نام و نام خانوادگی
+       </p>
+       <p class="text-center" id="name-content">
+        جناب آقای سهیل هاشمی
+       </p>
+      </div>
+      <div class="space-y-2">
+       <p class="text-center">
+        BMI
+       </p>
+       <p ,="" class="text-center" id="BMI-content">
+        28
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="table-container">
+     <!-- <div class="space-y-2 relative">
+                    <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-sm font-bold">
+                        <span class="pl-6 py-1 w-[75px]">روز اول</span>
+                        <span class="px-6 py-1 w-[72px]">ردیف</span>
+                        <span class="px-6 py-1 w-[134px] text-center">نام حرکت</span>
+                        <span class="pr-6 py-1 w-[75px]">تعداد</span>
+                    </div>
+                    <div class="seperating-line"></div>
+                </div>
+            
+                <div class="divide-y divide-gray-300">
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex-center gap-x-4">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic"/>
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Squats.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-2 relative pt-6">
+                    <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-sm font-bold">
+                        <span class="pl-6 py-1 w-[75px]">روز اول</span>
+                        <span class="px-6 py-1 w-[72px]">ردیف</span>
+                        <span class="px-6 py-1 w-[134px] text-center">نام حرکت</span>
+                        <span class="pr-6 py-1 w-[75px]">تعداد</span>
+                    </div>
+                    <div class="seperating-line"></div>
+                </div>
+            
+                <div class="divide-y divide-gray-300">
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex-center gap-x-4">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic"/>
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Squats.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="space-y-2 pt-4 tbl-row">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+                                <span class="pl-6 py-1 w-[72px]">1</span>
+                                <span class="px-6 py-1 w-[134px] text-center">پلانک</span>
+                                <span class="pr-6 py-1 w-[75px]">3×12</span>
+                            </div>
+                            <div class="flex gap-x-4 items-center justify-center">
+                                <img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">
+                                <img src="./src/images/Plank.jpg" class="h-[9vw]" alt="exercise-pic">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+     <!-- Table Header -->
+     <div class="space-y-2 relative">
+      <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-sm font-bold">
+       <span class="pl-6 py-1 w-[75px]">
+        روز اول
+       </span>
+       <span class="px-6 py-1 w-[72px]">
+        ردیف
+       </span>
+       <span class="px-6 py-1 w-[134px] text-center">
+        نام حرکت
+       </span>
+       <span class="pr-6 py-1 w-[75px]">
+        تعداد
+       </span>
+      </div>
+      <div class="seperating-line">
+      </div>
+     </div>
+     <div class="divide-y divide-gray-300">
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          1
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ با دمبل معکوس پرس شانه تک دست
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          2
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          بلند شدن ترکیه ای
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/3_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/3_03.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/3_04.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/3_05.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          3
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          پرش دمبل با شراگ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/7_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/7_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          4
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ به طرفین همره پرس سرشانه
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          5
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ به طرفین همره پرس سرشانه
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Beginner/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          6
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لیفت مرده پاصاف با دمبل به همراه پارویی
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/5_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/5_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          7
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          اسنچ تک دست دمبل زیر  زانو
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          8
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لیفت مرده پاصاف با دمبل به همراه پارویی
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/5_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/5_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          9
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ دست باز
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/3_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          10
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          11
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ دست باز
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Beginner/3_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          12
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ط¯ظ…ط¨ظ„
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          13
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          14
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ظ‡ط§ظ„طھط±
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          15
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          16
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ط¯ظ…ط¨ظ„
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          17
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          18
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          19
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          20
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ظ‡ط§ظ„طھط±
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          21
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Beginner/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Table Header -->
+     <div class="space-y-2 relative">
+      <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-sm font-bold">
+       <span class="pl-6 py-1 w-[75px]">
+        روز دوم
+       </span>
+       <span class="px-6 py-1 w-[72px]">
+        ردیف
+       </span>
+       <span class="px-6 py-1 w-[134px] text-center">
+        نام حرکت
+       </span>
+       <span class="pr-6 py-1 w-[75px]">
+        تعداد
+       </span>
+      </div>
+      <div class="seperating-line">
+      </div>
+     </div>
+     <div class="divide-y divide-gray-300">
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          1
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ با دمبل معکوس پرس شانه تک دست
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          2
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          بلند شدن ترکیه ای
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_03.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_04.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_05.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          3
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          پرش دمبل با شراگ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/7_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/7_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          4
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ به طرفین همره پرس سرشانه
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          5
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ به طرفین همره پرس سرشانه
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          6
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لیفت مرده پاصاف با دمبل به همراه پارویی
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          7
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          اسنچ تک دست دمبل زیر  زانو
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          8
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لیفت مرده پاصاف با دمبل به همراه پارویی
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          9
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ دست باز
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          10
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          11
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ دست باز
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          12
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ط¯ظ…ط¨ظ„
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          13
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          14
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ظ‡ط§ظ„طھط±
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          15
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          16
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ط¯ظ…ط¨ظ„
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          17
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          18
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          19
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          20
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ظ‡ط§ظ„طھط±
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          21
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Table Header -->
+     <div class="space-y-2 relative">
+      <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-sm font-bold">
+       <span class="pl-6 py-1 w-[75px]">
+        روز سوم
+       </span>
+       <span class="px-6 py-1 w-[72px]">
+        ردیف
+       </span>
+       <span class="px-6 py-1 w-[134px] text-center">
+        نام حرکت
+       </span>
+       <span class="pr-6 py-1 w-[75px]">
+        تعداد
+       </span>
+      </div>
+      <div class="seperating-line">
+      </div>
+     </div>
+     <div class="divide-y divide-gray-300">
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          1
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ با دمبل معکوس پرس شانه تک دست
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          2
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          بلند شدن ترکیه ای
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_03.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_04.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/3_05.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          3
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          پرش دمبل با شراگ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/7_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/7_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          4
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ به طرفین همره پرس سرشانه
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          5
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لانچ به طرفین همره پرس سرشانه
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Cardio/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          6
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لیفت مرده پاصاف با دمبل به همراه پارویی
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          7
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          اسنچ تک دست دمبل زیر  زانو
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          8
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          لیفت مرده پاصاف با دمبل به همراه پارویی
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/5_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          9
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ دست باز
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          10
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          11
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          شراگ دست باز
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Core/Intermediate/3_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          12
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ط¯ظ…ط¨ظ„
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          13
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          14
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ظ‡ط§ظ„طھط±
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          15
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          16
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ط¯ظ…ط¨ظ„
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/4_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          17
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          18
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          19
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ط§ط³ع©ط§طھ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/1_03.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          20
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ‡ظ†ع¯ ظ¾ظˆظ„ ظ‡ط§ظ„طھط±
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/5_02.jpg"/>
+        </div>
+       </div>
+      </div>
+      <div class="space-y-2 pt-4 tbl-row">
+       <div class="space-y-2">
+        <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
+         <span class="pl-6 py-1 w-[72px]" id="row-number">
+          21
+         </span>
+         <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">
+          ظ„غŒظپطھ ظ…ط±ط¯ظ‡ ظ¾ط§طµط§ظپ ط¨ط§ ظ‡ط§ظ„طھط± ط¨ظ‡ ظ‡ظ…ط±ط§ظ‡ ظ¾ط§ط±ظˆغŒغŒ
+         </span>
+         <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">
+          3×12
+         </span>
+        </div>
+        <div class="flex-center gap-x-4">
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_01.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_02.jpg"/>
+         <img alt="exercise-pic" class="h-[9vw]" src="../Balance/Intermediate/2_03.jpg"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </body>
+</html>

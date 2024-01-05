@@ -27,10 +27,11 @@ data = load_object('data')
 #pprint.PrettyPrinter(indent=4,width=30).pprint(data)    
 #data = {'40230853' : {'BMI' : 'Thin' , 'Program' : [[[('excercise nameA1' , ['first adress' , 'second address']) , ('excersise nameA2' , []) , (...)] , [('excerciseB1' , ['address1' , 'address2'])]] , [] , []] }}
 
-
+u = 0
 
 #ATTENTION! THE student number isn't string! it is an unknown type! 
 for person in data:
+    u += 1
     htmlfile = open('sport-program-build\index.html' , 'r' , encoding='utf8')
     index = htmlfile.read()
     soup = BeautifulSoup(index , 'html.parser')
@@ -126,7 +127,7 @@ for person in data:
         soup.body.section.div.find('div', {'id':'table-container'}).append(table)
         #print(f'---------------THIS IS THE {i}th table-----------------\n' ,table.prettify())
                                 #i use \\ instead of \ beacause if it doesn't it made error
-    with open("sport-program-build\\" + f'newFile{person}.html' , 'wb') as f:
+    with open("sport-program-build\\" + f'newFile{u}.html' , 'wb') as f:
         f.write(soup.prettify("utf-8"))
 
 
