@@ -1,6 +1,6 @@
 from os import listdir,rename
-
-result = 'code,name\n'
+result = '\ufeff'
+result += 'code,name\n'
 print (listdir())
 paths = [name for name in listdir() if name.endswith('.jpg')]
 data = {key.split('_')[0]:[] for key in paths}
