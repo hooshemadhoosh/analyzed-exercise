@@ -1,10 +1,19 @@
+from math import nan
 import pandas as pd
 import pickle
 from os import listdir
 import random
+
+from sympy import false
 kind = {'A':"Cardio" , 'B' : 'Core' , 'C': 'Balance', 'D': 'Whole body' , 'E': 'Strengthing' , 'F': 'Stretching'}
-level = ['Beginner','Intermediate','Advanced']
-person_level = {'بی تحرک':('Beginner' , 'Beginner') , 'بسیار فعال' : ('Beginner' , 'Intermediate' , 'Advanced' , 'Advanced'), 'نسبتا فعال' : ('Beginner' , 'Intermediate' , 'Intermediate') , 'کم تحرک':('Beginner' , 'Intermediate' , 'Intermediate') , 'بیش از حد فعال':('Intermediate' , 'Intermediate' , 'Advanced' , 'Advanced')}
+level = {'Beginner':0,'Intermediate':1,'Advanced':2}
+person_level = {'بی تحرک':('Beginner' , 'Beginner') ,
+                 'بسیار فعال' : ('Beginner' , 'Intermediate' , 'Advanced' , 'Advanced'),
+                   'نسبتا فعال' : ('Beginner' , 'Intermediate' , 'Intermediate') ,
+                     'کم تحرک':('Beginner' , 'Intermediate' , 'Intermediate') ,
+                'false':('Beginner' , 'Intermediate' , 'Intermediate'),
+                nan:('Beginner' , 'Intermediate' , 'Intermediate'),
+                  'بیش از حد فعال':('Intermediate' , 'Intermediate' , 'Advanced' , 'Advanced')}
 program = {"Thin":['1A1B1C1D3E1F','2A2B1C1D4E2F','3A3B1C1D5E3F'],
            "Fat":['3A1B1C1D1E1F','5A1B1C1D2E2F','7A2B1C1D2E3F'],
            "Normal":['2A1B1C1D2E1F','3A2B1C1D3E2F','4A2B2C1D4E3F']}
@@ -41,12 +50,13 @@ dirs = {}
 for key,value in kind.items():
     for lev in level:
         dirs[key+lev]=list(get_exercise_names(value+'\\'+lev+'\\').items())
-def get_programs(bmi):
+def get_programs(bmi,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),(,),...],...]
     result = []
-    for i,pro in enumerate(program[bmi]):
+    for lev in person_level[pers_level]:
         res = []
+        pro = program[bmi][level[lev]]
         for j in range(len(pro)//2):
-            name_picture_pair = dirs[pro[2*j+1]+level[i]]
+            name_picture_pair = dirs[pro[2*j+1]+lev]
             
             res += [random.choices(name_picture_pair, k=int(pro[2*j]) )]
         result.append(res)
@@ -54,10 +64,12 @@ def get_programs(bmi):
 
 
 
-file = pd.read_excel('excel.xlsx',1)
+file = pd.read_excel('excel.xlsx',1,dtype='str',keep_default_na= false)
+
 data = {f"{file['gender'][i]} {file['name'][i]} {file['family'][i]}":{name:file[name][i] for name in file.columns} for i in range(len(file['BMI']))}
 for key,value in data.items():
     value['BMI_VALUE'] = value['BMI']
+    value['BMI'] = float(value['BMI'])
     if value['BMI']<18.5:
         value['BMI']='Thin'
     elif 18.5<value['BMI']<25:
@@ -67,7 +79,8 @@ for key,value in data.items():
     data[key]=value
 for key,value in data.items():
     temp = value
-    temp['Program']=get_programs(value['BMI'])
+
+    temp['Program']=get_programs(value['BMI'],value['PERSON_LEVEL'].lower())
     data[key]=temp
 
 
