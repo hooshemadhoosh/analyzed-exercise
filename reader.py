@@ -4,6 +4,7 @@ from os import listdir
 import random
 kind = {'A':"Cardio" , 'B' : 'Core' , 'C': 'Balance', 'D': 'Whole body' , 'E': 'Strengthing' , 'F': 'Stretching'}
 level = ['Beginner','Intermediate','Advanced']
+person_level = {'بی تحرک':('Beginner' , 'Beginner') , 'بسیار فعال' : ('Beginner' , 'Intermediate' , 'Advanced' , 'Advanced'), 'نسبتا فعال' : ('Beginner' , 'Intermediate' , 'Intermediate') , 'کم تحرک':('Beginner' , 'Intermediate' , 'Intermediate') , 'بیش از حد فعال':('Intermediate' , 'Intermediate' , 'Advanced' , 'Advanced')}
 program = {"Thin":['1A1B1C1D3E1F','2A2B1C1D4E2F','3A3B1C1D5E3F'],
            "Fat":['3A1B1C1D1E1F','5A1B1C1D2E2F','7A2B1C1D2E3F'],
            "Normal":['2A1B1C1D2E1F','3A2B1C1D3E2F','4A2B2C1D4E3F']}
