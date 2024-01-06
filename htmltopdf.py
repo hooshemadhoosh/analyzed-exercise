@@ -15,7 +15,7 @@ def load_object(filename):
         print("Error during unpickling object (Possibly unsupported):", ex)
 
 def make_img_tag(address : str):
-    str_img_tag = '<img src="./src/images/Exercise.jpg" class="h-[9vw]" alt="exercise-pic">'
+    str_img_tag = '<img src="./src/images/Exercise.jpg" class="h-[2.2cm]" alt="exercise-pic" />'
     pattern = re.compile(r'src=".+" class=') #the pattern which i want to search for
     result = re.search(pattern , str_img_tag) 
     range1 = result.span() #returns a range of matched substring
@@ -37,8 +37,8 @@ for person in data:
     soup = BeautifulSoup(index , 'html.parser')
 
     #------general information------------
-    age = int(data[str(person)]['سن'])
-    bmi = str(int(data[person]['BMI_VALUE']))
+    age = int(float(data[str(person)]['سن']))
+    bmi = str(int(float(data[person]['BMI_VALUE'])))
 
     #finding the paragraph tag which contains the name of the person
     nameee = soup.find('p' , {'id' : 'name-content'})
@@ -51,10 +51,13 @@ for person in data:
 
     bmichange =  soup.find('p' , {'id':'BMI-content'}).find(text=re.compile(r'\d+')).replace_with(bmi)
 
-
-    each_day_level = person_level[data[str(person)]['میزان فعالیت']]
+    try:
+        each_day_level = person_level[data[str(person)]['PERSON_LEVEL']]
+    except KeyError:
+        each_day_level = 'نسبتا فعال'
 
     exc_program = data[str(person)]['Program']
+    print (exc_program)
     for i in range(len(exc_program)):
         level = each_day_level[i]
         #merging all type of exercises in one list which contains some tuples 
@@ -62,47 +65,57 @@ for person in data:
         exercises = [e for k in exc_program for e1 in k for e in e1] 
         day_num = day[i]
         #making table tage
-        table = BeautifulSoup('<div class="divide-y divide-gray-300"></div>' , 'html.parser')
+        table = BeautifulSoup('<div id="table-body"></div>' , 'html.parser')
         table_header_string =   '''
                 <!-- Table Header -->
-                <div class="space-y-2 relative">
-                    <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-sm font-bold">
-                        <span class="pl-6 py-1 w-[75px]">روز اول</span>
-                        <span class="px-6 py-1 w-[72px]">ردیف</span>
-                        <span class="px-6 py-1 w-[134px] text-center">نام حرکت</span>
-                        <span class="pr-6 py-1 w-[75px]">تعداد</span>
+                <div id="table-header">
+                    <h2 class="py-2 text-center font-bold text-lg">
+                        روز اول
+                    </h2>
+                    <div class="flex text-center font-bold border-t-2 border-orange-200">
+                        <span class="py-1 w-[218px] row-title">تمرین</span>
+                        <span class="py-1 w-[60px] row-title">تکرار</span>
+                        <span class="py-1 w-[60px] row-title">ست</span>
+                        <span class="py-1 w-[100px] row-title">شدت</span>
+                        <span class="py-1 w-[120px] row-title">ضرب آهنگ</span>
+                        <span class="py-1 w-[120px] row-title">استراحت</span>
+                        <span class="py-1 w-[120px] row-title">توضیحات</span>
                     </div>
-                    <div class="seperating-line"></div>
                 </div>
                                 '''
         table_header = BeautifulSoup(table_header_string , 'html.parser')
-        commit_day_number = table_header.find('span' , {'class' : 'pl-6 py-1 w-[75px]'}).find(text=re.compile(r'.+')).replace_with(day_num)
-        rownum = 0
+        commit_day_number = table_header.find('h2' , {'class' : 'py-2 text-center font-bold text-lg'}).find(text=re.compile(r'.+')).replace_with(day_num)
+        #rownum = 0
         for exercise in exercises:
-            rownum += 1
+            #rownum += 1
             #making the tag of a row of table
             row_html_str ="""
-            <div class="space-y-2 pt-4 tbl-row">
-                <div class="space-y-2">
-                    <div class="flex items-center justify-center divide-x-2 divide-x-reverse divide-gray-300 text-xs">
-                        <span class="pl-6 py-1 w-[72px]" id="row-number">1</span>
-                        <span class="px-6 py-1 w-[134px] text-center" id="exercise-name">پلانک</span>
-                        <span class="pr-6 py-1 w-[75px]" id="sets-numbers-perset">3×12</span>
+            <!-- Each Row -->
+                    <div class="tbl-row">
+                        <div class="flex text-center">
+                            <span class="py-2 w-[218px] row-title" id="exercise-name">اسکوات با تی آر ایکس</span>
+                            <span class="py-2 w-[60px] row-title" id="repeation">12</span>
+                            <span class="py-2 w-[60px] row-title" id="set">4</span>
+                            <span class="py-2 w-[100px] row-title" id="intensity">70-80%</span>
+                            <span class="py-2 w-[120px] row-title" id="beat">2 /0/2</span>
+                            <span class="py-2 w-[120px] row-title" id="relaxation-time">60-90 ثانیه</span>
+                            <span class="py-2 w-[120px] row-title" id="explanation">سوپر ست</span>
+                        </div>
+                        <div class="flex justify-around" id="image-container">
+                            
+                        </div>
                     </div>
-                    <div class="flex-center gap-x-4">
-                    </div>
-                </div>
-            </div>"""
+                    """
             row = BeautifulSoup(row_html_str , 'html.parser')
 
             #change the exercise name with a new one
             tempor = row.find('span' , {'id':'exercise-name'}).find(text=re.compile(r'.+')).replace_with(str(exercise[0]))
 
             #finding the kind of the exercise
-            for l in range(len(exc_program)):
-                for j in range(len(exc_program[l])):
-                    if exercise in exc_program[l][j]:
-                        kind_of_exercise = kind[l]
+            for lev in range(len(exc_program)):
+                for kindd in range(len(exc_program[lev])):
+                    if exercise in exc_program[lev][kindd]:
+                        kind_of_exercise = kind[kindd]
                         break
 
 
@@ -117,8 +130,8 @@ for person in data:
             #we have all image tags here!
             img_tag = BeautifulSoup(all_str_img_tags , 'html.parser')
 
-            commit_img_tag = row.find('div' , {'class' : 'flex-center gap-x-4'}).append(img_tag)
-            commit_row_num = row.find('span' , {'id':'row-number'}).find(text=re.compile(r'\d+')).replace_with(str(rownum))
+            commit_img_tag = row.find('div' , {'id' : 'image-container'}).append(img_tag)
+            #commit_row_num = row.find('span' , {'id':'row-number'}).find(text=re.compile(r'\d+')).replace_with(str(rownum))
             commit_exer_name = row.find('span' , {'id':"exercise-name"}).find(text=re.compile(r'.+')).replace_with(str(exercise[0]))
 
             table.div.append(row)

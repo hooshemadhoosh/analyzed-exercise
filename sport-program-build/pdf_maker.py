@@ -10,7 +10,7 @@ options = {
     'margin-bottom': '0in',
     'margin-left': '0in',
     'orientation':'portrait',
-    # 'encoding': "UTF-8",
+    'encoding': "UTF-8",
     # 'custom-header': [
     #     ('Accept-Encoding', 'gzip')
     # ],
@@ -22,4 +22,4 @@ options = {
     'no-outline': None
 }
 for i in files:
-    pdfkit.from_file( f'./sport-program-build/{i}', f'{i[:-5]}.pdf' ,configuration=config , options=options)
+    pdfkit.from_file( f'./sport-program-build/{i}', f'./sport-program-build/{i[:-5]}.pdf' ,configuration=config , options=options)
