@@ -69,11 +69,6 @@ def make_img_tag(address : str):
     return str_img_tag
 
 def return_image_tag(addresslist : list):
-    x = '''
-    <div class="flex p-2 justify-center items-center gap-1 w-full">
-    place_all_image_tags_here!
-    </div>
-    '''
     images_tag = ''''''
     if len(addresslist) == 0:
         return
@@ -171,7 +166,7 @@ for person_data in data:
                     {return_image_tag(list(exercise[1]))}
                     </div>
             '''
-            elif len(exercise) == 0:
+            elif len(exercise[1]) == 0:
                 continue
             else:
                  tag_of_each_row = f'''
