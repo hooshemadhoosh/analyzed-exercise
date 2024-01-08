@@ -266,6 +266,7 @@ for person_data in data:
         </section>
     </body>
     """
+    all_tables = ''''''
     main_html_text = replacing('persons_name1234' , str(person_data) , main_html_text)
     main_html_text = replacing('BMI_of_the_person' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
     main_html_text = replacing('age_number1234' , str(data[person_data]['سن']) , main_html_text)
@@ -296,6 +297,8 @@ for person_data in data:
                     {return_image_tag(list(exercise[1]))}
                     </div>
             '''
+            elif len(exercise) == 0:
+                continue
             else:
                  tag_of_each_row = f'''
                     <div class="tbl-row" id="one-col">
@@ -306,9 +309,9 @@ for person_data in data:
             rows_tag += tag_of_each_row
         table_tag = replacing('123day_number123' , day[day_number] , table_tag)
         table_tag = replacing('tablerooooooooooooows' , rows_tag , table_tag)
+        all_tables += table_tag
         day_number += 1
-    main_html_text = replacing('junkstring' , table_tag , main_html_text)
-    print (main_html_text)  
+    main_html_text = replacing('junkstring' , all_tables , main_html_text)
     with open("sport-program-build-new-version\\" + f'newFile{u}.html' , 'w' , encoding='utf-8') as f:
         f.write(main_html_text)
     u += 1
