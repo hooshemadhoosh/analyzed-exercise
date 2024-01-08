@@ -41,7 +41,7 @@ def get_exercise_names(dir0):
     for name in names:
         code = name.split('_')[0]
         try:
-            result[code]+= [name]
+            result[code]+= [dir0+name]
         except:
             print("Name is not defined for a file...")
     result = {dictionary[key]:tuple(value) for key,value in result.items()}
