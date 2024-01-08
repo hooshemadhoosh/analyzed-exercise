@@ -1,7 +1,7 @@
 # #import asyncio
 # from pyppeteer import launch
 from os import listdir
-
+from bs4 import BeautifulSoup
 # async def generate_pdf_from_html(html_content, pdf_path):
 #     browser = await launch()
 #     page = await browser.newPage()
@@ -41,9 +41,11 @@ files = listdir('./')
 print (files)
 for fi in files:
     if fi != 'index.html' and fi[-4:] == 'html':
-        html_content = open(f'{fi}' , 'r' , encoding='utf8')
-        html_content = html_content.read()
-        if convert_html_to_pdf(html_content, f'./{fi}'):
-            print(f"PDF generated and saved at {fi}")
-        else:
-            print("PDF generation failed")
+        with open(f'{fi}' , 'r' , encoding='utf-8') as soup:
+        #html_content = open(f'{fi}' , 'r' , encoding='utf8')
+        #html_content = html_content.read()
+        #soup = BeautifulSoup(html_content , 'html.parser')
+            if convert_html_to_pdf(soup, f'./{fi}'):
+                print(f"PDF generated and saved at {fi}")
+            else:
+                print("PDF generation failed")

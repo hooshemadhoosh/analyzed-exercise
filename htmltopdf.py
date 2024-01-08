@@ -50,7 +50,6 @@ def load_object(filename):
         print("Error during unpickling object (Possibly unsupported):", ex)
 
 def find_range_string(x , from_text):
-    pattern = re.compile(x) #the pattern which i want to search for
     result = re.search(x , from_text) 
     return result.span()
 
@@ -60,13 +59,6 @@ def replacing(to_remove : str , to_replace : str , maintext : str):
     final = range1[1]
     return maintext.replace(maintext[intt:final] , to_replace)
 
-def make_img_tag(address : str):
-    str_img_tag = '<img src="./src/images/Exercise.jpg" class="h-[2.2cm]" alt="exercise-pic" />'
-    pattern = re.compile(r'src=".+" class=') #the pattern which i want to search for
-    result = re.search(pattern , str_img_tag) 
-    range1 = result.span() #returns a range of matched substring
-    str_img_tag = str_img_tag.replace(str_img_tag[range1[0] + 4 : range1[1]-7] , f'{address}') #replacing last address with a new one!
-    return str_img_tag
 
 def return_image_tag(addresslist : list):
     images_tag = ''''''
