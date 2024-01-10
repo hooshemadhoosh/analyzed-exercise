@@ -7,7 +7,7 @@ from tkinter import filedialog
 
 def html_to_pdf(html_file_name,pdf_file_name):
     command = f"chrome --headless --disable-gpu --print-to-pdf={pdf_file_name} --no-pdf-header-footer --run-all-compositor-stages-before-draw --no-margins --no-sandbox {html_file_name}"
-    process = Popen(command.split(), stdout=PIPE, stderr=PIPE)
+    process = Popen(command.split(), stdout=PIPE, stderr=PIPE,shell=True)
     process.communicate()
     print(f"PDF Created as {pdf_file_name}")
 
