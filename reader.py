@@ -4,7 +4,7 @@ import pickle
 from os import listdir
 import random
 
-from sympy import false
+root = "Fitness\\"
 kind = {'A':"Cardio" , 'B' : 'Core' , 'C': 'Balance', 'D': 'Whole body' , 'E': 'Strengthing' , 'F': 'Stretching'}
 level = {'Beginner':0,'Intermediate':1,'Advanced':2}
 person_level = {'بی تحرک':('Beginner' , 'Beginner') ,
@@ -49,7 +49,7 @@ def get_exercise_names(dir0):
 dirs = {}
 for key,value in kind.items():
     for lev in level:
-        dirs[key+lev]=list(get_exercise_names(value+'\\'+lev+'\\').items())
+        dirs[key+lev]=list(get_exercise_names(root+value+'\\'+lev+'\\').items())
 def get_programs(bmi,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),(,),...],...]
     result = []
     for lev in person_level[pers_level]:
@@ -64,7 +64,7 @@ def get_programs(bmi,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),(,),...],..
 
 
 
-file = pd.read_excel('excel.xlsx',1,dtype='str',keep_default_na= false)
+file = pd.read_excel('excel.xlsx',1,dtype='str',keep_default_na= False)
 
 data = {f"{file['gender'][i]} {file['name'][i]} {file['family'][i]}":{name:file[name][i] for name in file.columns} for i in range(len(file['BMI']))}
 for key,value in data.items():
