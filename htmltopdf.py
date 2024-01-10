@@ -1,32 +1,69 @@
 import pickle
-from bs4 import BeautifulSoup
 import re
 from PIL import Image
 from numpy import imag
 
-main_information_tag = '''
-                    <div class="flex flex-col justify-around border-l-2 border-third divide-y divide-third">
+pure_html_code = """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sport Program</title>
+        <link rel="stylesheet" href="./src/css/output.css">
+    </head>
+    <body dir="rtl">
+        <section class="p-2">
+            <!-- Information -->
+            <div class="information">
+                <div class="flex justify-center items-center gap-x-8">
+                    <div class="space-y-2">
+                        <p class="text-center">سن</p>
+                        <p class="text-center">PUT_AGE_HERE!</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-center">نام و نام خانوادگی</p>
+                        <p class="text-center">PUT_PERSON_NAME_HERE!</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-center">BMI</p>
+                        <p class="text-center">PUT_BMI_VALUE_HERE!</p>
+                    </div>
+                </div>            
+            </div>
+            PUT ALL TABLES HERE!
+        </section>
+    </body>
+    </html>
+"""
+
+information_in_row = '''
+                    <div class="texts-container">
                         <span class="row-title">
-                            <span>تمرین</span>
                             <!-- these spans should be changed -->
+                            <span>تمرین</span>
                             <span>exna1</span>
                         </span>
-                        <span class="row-title">
-                            <span>تکرار</span>
-                            <span>12</span>
-                        </span>
-                        <span class="row-title">
-                            <span>ست</span>
-                            <span>4</span>
-                        </span>
-                        <span class="row-title">
-                            <span>شدت</span>
-                            <span>70-80%</span>
-                        </span>
-                        <span class="row-title">
-                            <span>ضرب آهنگ</span>
-                            <span>2 /0/2</span>
-                        </span>
+                        <div class="flex divide-x divide-x-reverse divide-third">                       
+                            <span class="row-title w-10 flex-shrink-0">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="flex divide-x divide-x-reverse divide-third">
+                            <span class="row-title w-10 flex-shrink-0">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
                         <span class="row-title">
                             <span>استراحت</span>
                             <span>60-90 ثانیه</span>
@@ -38,9 +75,6 @@ main_information_tag = '''
                     </div>
             '''
 day = {0:'روز اول' , 1: 'روز دوم' , 2:'روز سوم'  , 3:'روز چهارم'  , 4:"روز پنجم"}
-person_level = {'بی تحرک':('Beginner' , 'Beginner') , 'بسیار فعال' : ('Beginner' , 'Intermediate' , 'Advanced' , 'Advanced'), 'نسبتا فعال' : ('Beginner' , 'Intermediate' , 'Intermediate') , 'کم تحرک':('Beginner' , 'Intermediate' , 'Intermediate') , 'بیش از حد فعال':('Intermediate' , 'Intermediate' , 'Advanced' , 'Advanced')}
-kind = {0:"Cardio" ,1 : 'Core' , 2: 'Balance', 3: 'Whole body' , 4: 'Strengthing' , 5: 'Stretching'}
-
 #physical_activity = {"مقدار تحرک":(listindex , level)}
 def load_object(filename):
     try:
@@ -86,51 +120,19 @@ def return_image_tag(addresslist : list):
                         </div>
                         '''
         return  f'''
-                <div class="flex p-2 justify-center items-center gap-1 w-full">
+                <div class="images-container">
                 {images_tag}
                 </div>
                 '''
 
 data = load_object('data')
-u = 0
+
 for person_data in data:
-    main_html_text = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sport Program</title>
-        <link rel="stylesheet" href="./src/css/output.css">
-    </head>
-    <body dir="rtl">
-    
-        <section class="p-6">
-            <!-- Information -->
-            <div class="py-1 bg-second text-main">
-                <div class="flex justify-center items-center gap-x-8">
-                    <div class="space-y-2">
-                        <p class="text-center">سن</p>
-                        <p class="text-center">age_number1234</p>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-center">نام و نام خانوادگی</p>
-                        <p class="text-center">persons_name1234</p>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-center">BMI</p>
-                        <p class="text-center">BMI_of_the_person</p>
-                    </div>
-                </div>            
-            </div>
-            junkstring
-        </section>
-    </body>
-    """
+    main_html_text = pure_html_code
     all_tables = ''''''
-    main_html_text = replacing('persons_name1234' , str(person_data) , main_html_text)
-    main_html_text = replacing('BMI_of_the_person' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
-    main_html_text = replacing('age_number1234' , str(data[person_data]['سن']) , main_html_text)
+    main_html_text = replacing('PUT_PERSON_NAME_HERE!' , str(person_data) , main_html_text)
+    main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
+    main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
     exercise_program = data[person_data]['Program']
     day_number = 0
     for each_day in exercise_program:
@@ -149,7 +151,7 @@ for person_data in data:
         rows_tag = ''''''
         for exercise in all_exercises:
             tag_of_each_row = ''''''
-            information_tag = main_information_tag
+            information_tag = information_in_row
             information_tag = replacing('exna1' , exercise[0] , information_tag)
             if len(exercise[1]) > 2:
                 tag_of_each_row = f'''
@@ -172,9 +174,9 @@ for person_data in data:
         table_tag = replacing('tablerooooooooooooows' , rows_tag , table_tag)
         all_tables += table_tag
         day_number += 1
-    main_html_text = replacing('junkstring' , all_tables , main_html_text)
-    with open("sport-program-build-new-version\\" + f'newFile{u}.html' , 'w' , encoding='utf-8') as f:
+    main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
+    with open("sport-program-build\\" + f'{str(person_data)}.html' , 'w' , encoding='utf-8') as f:
         f.write(main_html_text)
-    u += 1
+
 
                 

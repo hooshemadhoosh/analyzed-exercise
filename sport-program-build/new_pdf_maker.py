@@ -1,51 +1,38 @@
-# #import asyncio
-# from pyppeteer import launch
-from os import listdir
-from bs4 import BeautifulSoup
-# async def generate_pdf_from_html(html_content, pdf_path):
-#     browser = await launch()
-#     page = await browser.newPage()
-    
-#     await page.setContent(html_content)
-    
-#     await page.pdf({'path': pdf_path, 'format': 'A4'})
-    
-#     await browser.close()
-
-# for i in listdir('./'):
-#     if i != 'index.html' and i[-4:] == 'html':
-#         htmlfile = open(f'sport-program-build/{i}' , 'r' , encoding='utf8')
-#         index = htmlfile.read()
-#         if __name__ == '__main__':
-#             loop = asyncio.new_event_loop()
-#             asyncio.set_event_loop(loop)
-#             try:
-#                 asyncio.get_event_loop().run_until_complete(generate_pdf_from_html(index, 'index.pdf'))    
-#             except KeyboardInterrupt:
-#                 pass
-
-
-# # HTML content
-# # Run the function
-
+#import asyncio
+#from pyppeteer import launch
+import os
+#async def generate_pdf_from_html(html_content, pdf_path):
+#    browser = await launch()
+#    page = await browser.newPage()
+#    
+#    await page.setContent(html_content)
+#    
+#    await page.pdf({'path': pdf_path, 'format': 'A4'})
+#    
+#    await browser.close()
+#
+## Run the function
+#for files in os.listdir('./'):
+#    if files != 'index.html' and files[-4:] == 'html':
+#        htmlfile = open(f'./{files}' , 'r' , encoding='utf-8')
+#        htmlfile = htmlfile.read()
+#        print (type(htmlfile))
+#        asyncio.get_event_loop().run_until_complete(generate_pdf_from_html(htmlfile, f'{files[:-5]}.pdf'))
+#
 
 from xhtml2pdf import pisa
 
 def convert_html_to_pdf(html_string, pdf_path):
     with open(pdf_path, "wb") as pdf_file:
         pisa_status = pisa.CreatePDF(html_string, dest=pdf_file)
-        
     return not pisa_status.err
 
-files = listdir('./')
-print (files)
-for fi in files:
-    if fi != 'index.html' and fi[-4:] == 'html':
-        with open(f'{fi}' , 'r' , encoding='utf-8') as soup:
-        #html_content = open(f'{fi}' , 'r' , encoding='utf8')
-        #html_content = html_content.read()
-        #soup = BeautifulSoup(html_content , 'html.parser')
-            if convert_html_to_pdf(soup, f'./{fi}'):
-                print(f"PDF generated and saved at {fi}")
-            else:
-                print("PDF generation failed")
+for files in os.listdir('./'):
+    if files != 'index.html' and files[-4:] == 'html':
+        htmlfile = open(f'./{files}' , 'r' , encoding='utf-8')
+        html_content = htmlfile.read()
+# Generate PDF
+        if convert_html_to_pdf(html_content, f'{files[:-5]}.pdf'):
+            print(f"PDF generated")
+        else:
+            print("PDF generation failed")
