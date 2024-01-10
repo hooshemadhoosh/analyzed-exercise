@@ -126,7 +126,6 @@ def return_image_tag(addresslist : list):
                 '''
 
 data = load_object('data')
-
 for person_data in data:
     main_html_text = pure_html_code
     all_tables = ''''''
@@ -175,8 +174,10 @@ for person_data in data:
         all_tables += table_tag
         day_number += 1
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
-    with open("sport-program-build\\" + f'{str(person_data)}.html' , 'w' , encoding='utf-8') as f:
-        f.write(main_html_text)
+    if data[person_data]['gender'] != 'میانگین':
+        file_name = str(person_data).replace(' ' , '_' )
+        with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
+            f.write(main_html_text)
 
 
                 
