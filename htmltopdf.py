@@ -10,24 +10,23 @@ pure_html_code = """
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sport Program</title>
-        <link rel="stylesheet" href="./src/css/output.css">
+        <link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/test.css">
     </head>
     <body dir="rtl">
         <section class="p-2">
-            <!-- Information -->
             <div class="information">
-                <div class="flex justify-center items-center gap-x-8">
-                    <div class="space-y-2">
-                        <p class="text-center">سن</p>
-                        <p class="text-center">PUT_AGE_HERE!</p>
+                <div class="information_contianer">
+                    <div class="information_texts">
+                        <p>سن</p>
+                        <p>PUT_AGE_HERE!</p>
                     </div>
-                    <div class="space-y-2">
-                        <p class="text-center">نام و نام خانوادگی</p>
-                        <p class="text-center">PUT_PERSON_NAME_HERE!</p>
+                    <div class="information_texts">
+                        <p>نام و نام خانوادگی</p>
+                        <p>PUT_PERSON_NAME_HERE!</p>
                     </div>
-                    <div class="space-y-2">
-                        <p class="text-center">BMI</p>
-                        <p class="text-center">PUT_BMI_VALUE_HERE!</p>
+                    <div class="information_texts">
+                        <p>BMI</p>
+                        <p>PUT_BMI_VALUE_HERE!</p>
                     </div>
                 </div>            
             </div>
@@ -40,12 +39,11 @@ pure_html_code = """
 information_in_row = '''
                     <div class="texts-container">
                         <span class="row-title">
-                            <!-- these spans should be changed -->
                             <span>تمرین</span>
                             <span>exna1</span>
                         </span>
-                        <div class="flex divide-x divide-x-reverse divide-third">                       
-                            <span class="row-title w-10 flex-shrink-0">
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
                                 <span>تکرار</span>
                                 <span>12</span>
                             </span>
@@ -54,8 +52,8 @@ information_in_row = '''
                                 <span>70-80%</span>
                             </span>
                         </div>
-                        <div class="flex divide-x divide-x-reverse divide-third">
-                            <span class="row-title w-10 flex-shrink-0">
+                        <div class="row-title_two-col">
+                            <span class="row-title">
                                 <span>ست</span>
                                 <span>4</span>
                             </span>
