@@ -37,6 +37,9 @@ import os
 #         else:
 #             print("PDF generation failed")
 
+#wkhtml to pdf command:
+#>wkhtmltopdf --margin-top 10px --margin-bottom 10px  --margin-left 0px  --margin-right 0px --page-size A4 --background --enable-local-file-access --encoding UTF-8 C:\Users\Padidar\analyzed-exercise\sport-program-build\file1.html ../../../sport-program-build/file1.pdf
+
 import pdfkit
 congig = pdfkit.configuration(wkhtmltopdf='../REQUIREMENTS/wkhtmltopdf/bin/wkhtmltopdf.exe')
 pdfkit.from_file("جناب_آقای_مهدی_حافظپور.html" , 'new1.pdf'  , css="./src/css/test.css",options={"enable-local-file-access": ""} , configuration=congig)
