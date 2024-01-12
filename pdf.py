@@ -11,6 +11,12 @@ def html_to_pdf(html_file_name,pdf_file_name):
     process.communicate()
     print(f"PDF Created as {pdf_file_name}")
 
+def html_to_pdf2(html_file_name,pdf_file_name):
+    command = f"wkhtmltopdf --margin-top 0 --margin-bottom 0 --margin-left 0 --margin-right 0 --background --print-media-type --enable-smart-shrinking --page-size Letter --encoding UTF-8 {html_file_name} {pdf_file_name}"
+    process = Popen(command.split(), stdout=PIPE, stderr=PIPE,shell=True)
+    process.communicate()
+    print(f"PDF Created as {pdf_file_name}")
+
 root = tk.Tk()
 root.withdraw()
 directory = filedialog.askdirectory()+'/'
