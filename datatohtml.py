@@ -18,7 +18,11 @@ pure_html_code = """
         margin: 0;
         box-sizing: border-box;
     }
-
+    @page {
+        margin: 0;
+        padding: 0;
+        size: 8.3in 11.7in;
+    }
     @font-face {
         font-family: "Vazir";
         src: url("./src/fonts/Vazir-FD-WOL.ttf");
@@ -323,7 +327,7 @@ for person_data in data:
     if data[person_data]['gender'] != 'میانگین':
         nnnnn += 1
         file_name = str(person_data).replace(' ' , '_' )
-        with open("sport-program-build\\" + f'file{nnnnn}.html' , 'w' , encoding='utf-8') as f:
+        with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
             f.write(main_html_text)
 
 
