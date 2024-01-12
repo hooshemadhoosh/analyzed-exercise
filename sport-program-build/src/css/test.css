@@ -88,7 +88,6 @@ img {
     color: var(--second-color);
 }
 
-/* For two columns rows */
 #one-col {
     width: calc(50% - 2px);
 }
@@ -132,7 +131,6 @@ img {
     padding-right: 4px;
 }
 
-/* For increasing heigth of name & des in each row */
 .texts-container > .row-title:first-child,
 .texts-container > .row-title:last-child {
     flex-grow: 1;
@@ -147,7 +145,6 @@ img {
     padding: 4px;
 }
 
-/* For vertical images */
 #vertical-img {
     height: 95%;
 }
@@ -155,7 +152,6 @@ img {
     height: 100%;
 }
 
-/* For horizental images */
 #horizental-img {
     width: 128px;
 }

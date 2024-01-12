@@ -38,5 +38,5 @@ import os
 #             print("PDF generation failed")
 
 import pdfkit
-congig = pdfkit.configuration()
-pdfkit.from_file("جناب_آقای_مهدی_حافظپور.html" , 'new1.pdf'  , css="src/css/test.css",options={"enable-local-file-access": ""} )
+congig = pdfkit.configuration(wkhtmltopdf='../REQUIREMENTS/wkhtmltopdf/bin/wkhtmltopdf.exe')
+pdfkit.from_file("جناب_آقای_مهدی_حافظپور.html" , 'new1.pdf'  , css="./src/css/test.css",options={"enable-local-file-access": ""} , configuration=congig)

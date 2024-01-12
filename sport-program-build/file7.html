@@ -1,0 +1,1942 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sport Program</title>
+        <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
+    </head>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: "Vazir";
+        src: url("./src/fonts/Vazir-FD-WOL.ttf");
+    }
+
+    body {
+        font-family: "Vazir";
+        font-size: 14px;
+        overflow-x: hidden;
+        margin: auto;
+        width: 210mm;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .information {
+        display: inline-block;
+        position: relative;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 4px 24px;
+        background-color: #e8e8e8;
+        color: #101830;
+        font-size: 10px;
+    }
+
+    .information_contianer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 32px;
+    }
+
+    .information_texts {
+        text-align: center;
+    }
+    .information_texts *:first-child {
+        margin-bottom: 6px;
+    }
+
+    #table-header {
+        padding: 4px 0;
+        border: 2px solid #505052;
+        background-color: #505052;
+        color: #e8e8e8;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    #table-body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 10%;
+    }
+
+    .tbl-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 150px;
+        background-color: #101830;
+        color: #e8e8e8;
+    }
+
+    #one-col {
+        width: calc(50% - 2px);
+    }
+
+    .texts-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 2px solid #505052;
+    }
+
+    .texts-container > * {
+        border-top: 1px solid #505052;
+    }
+    .texts-container > *:first-child {
+        border-top: 0;
+    }
+
+    .row-title {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+    }
+
+    .row-title_two-col {
+        display: flex;
+    }
+    .row-title_two-col > *:first-child {
+        width: 40px;
+        flex-shrink: 0;
+        border-left: 1px solid #505052;
+    }
+
+    .row-title span:first-child {
+        font-size: 6px;
+        padding-left: 2px;
+        border-left: 1px solid #505052;
+    }
+    .row-title span:last-child {
+        font-size: 9px;
+        padding-right: 4px;
+    }
+
+    .texts-container > .row-title:first-child,
+    .texts-container > .row-title:last-child {
+        flex-grow: 1;
+    }
+
+    .images-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2px;
+        padding: 4px;
+    }
+
+    #vertical-img {
+        height: 95%;
+    }
+    #vertical-img img {
+        height: 100%;
+    }
+
+    #horizental-img {
+        width: 128px;
+    }
+    </style>
+    <body dir="rtl">
+        <section class="p-2">
+            <div class="information">
+                <div class="information_contianer">
+                    <div class="information_texts">
+                        <p>سن</p>
+                        <p>44</p>
+                    </div>
+                    <div class="information_texts">
+                        <p>نام و نام خانوادگی</p>
+                        <p>جناب_آقای_ولی_اله_امیری</p>
+                    </div>
+                    <div class="information_texts">
+                        <p>BMI</p>
+                        <p>27</p>
+                    </div>
+                </div>            
+            </div>
+            
+            <div id="table-container">
+                <div id="table-header">
+                    روز اول 
+                </div>
+                <div id="table-body">
+                    
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>بلند شدن ترکیه ای</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Cardio\Beginner\3_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Cardio\Beginner\3_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Cardio\Beginner\3_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Cardio\Beginner\3_04.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Cardio\Beginner\3_05.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>چرخش دایره ای مچ پا</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\87_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\87_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\87_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\87_4.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\87_5.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>بلند شدن ترکیه ای</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Whole body\Beginner\3_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Whole body\Beginner\3_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Whole body\Beginner\3_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Whole body\Beginner\3_04.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Whole body\Beginner\3_05.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>اسکات به همراه باز کردن سریع دست ها بالای سر</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\2_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\2_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\2_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>قیچی</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Core\Beginner\26_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Core\Beginner\26_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Core\Beginner\26_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>لانچ به طرفین همره پرس سرشانه</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\5_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\5_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>جلو بازو با هالتر معکئس</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Beginner\33_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Beginner\33_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>کشش مهره ها</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Beginner\11_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Beginner\11_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                </div>
+            </div>
+    
+            <div id="table-container">
+                <div id="table-header">
+                    روز دوم 
+                </div>
+                <div id="table-body">
+                    
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>اسنچ کتری شکل</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\2_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\2_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\2_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>اسنچ تک دست دمبل زیر  زانو</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>اسنچ تک دست دمبل زیر  زانو</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شراگ</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\4_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\4_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شراگ</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\4_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\4_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>تعادل تک پا و جلو بازو</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Intermediate\28_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Intermediate\28_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شراگ دست باز</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Whole body\Intermediate\3_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Whole body\Intermediate\3_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شنا با توپ بوسو</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\73_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\73_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>بالا کشیدن ران</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\49_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\49_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>کشش چهارسر ران</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Intermediate\19_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Intermediate\19_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>کشش پشت ساق زانو خم</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Stretching\Intermediate\18_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Stretching\Intermediate\18_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>پلانک پهلو تک پا</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Core\Intermediate\29_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                </div>
+            </div>
+    
+            <div id="table-container">
+                <div id="table-header">
+                    روز سوم 
+                </div>
+                <div id="table-body">
+                    
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>لیفت مرده پاصاف با دمبل به همراه پارویی</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\5_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\5_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\5_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>اسنچ کتری شکل</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\2_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\2_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\2_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>اسنچ تک دست دمبل زیر  زانو</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\1_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شافل گام بردان جانبی ورزشی</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Intermediate\39_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Intermediate\39_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Intermediate\39_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>لیفت مرده پاصاف با دمبل به همراه پارویی</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Whole body\Intermediate\5_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Whole body\Intermediate\5_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Whole body\Intermediate\5_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>کشش عضلات خم کننده هیپ زانو زده</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Stretching\Intermediate\10_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Stretching\Intermediate\10_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Stretching\Intermediate\10_03.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شراگ دست باز</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\3_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\3_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>شراگ</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\4_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Intermediate\4_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>لیفت مرده با دمبل تک دست</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\102_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\102_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>بلند شدن از روی زمین تک پا</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\53_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Intermediate\53_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>کشش همسترینگ ایستاده</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Intermediate\13_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Intermediate\13_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                    <div class="tbl-row" id="one-col">
+                    
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>پلانک پاهای بالا تک پا  </span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>4</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>2 /0/2</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>60-90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                    
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Core\Intermediate\28_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                    </div>
+            
+                </div>
+            </div>
+    
+        </section>
+    </body>
+    </html>

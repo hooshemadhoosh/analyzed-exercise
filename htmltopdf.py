@@ -1,7 +1,7 @@
 import pickle
 import re
 from PIL import Image
-from numpy import imag
+import os
 
 pure_html_code = """
     <!DOCTYPE html>
@@ -10,8 +10,156 @@ pure_html_code = """
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sport Program</title>
-        <link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/test.css">
+        <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
     </head>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: "Vazir";
+        src: url("./src/fonts/Vazir-FD-WOL.ttf");
+    }
+
+    body {
+        font-family: "Vazir";
+        font-size: 14px;
+        overflow-x: hidden;
+        margin: auto;
+        width: 210mm;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .information {
+        display: inline-block;
+        position: relative;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 4px 24px;
+        background-color: #e8e8e8;
+        color: #101830;
+        font-size: 10px;
+    }
+
+    .information_contianer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 32px;
+    }
+
+    .information_texts {
+        text-align: center;
+    }
+    .information_texts *:first-child {
+        margin-bottom: 6px;
+    }
+
+    #table-header {
+        padding: 4px 0;
+        border: 2px solid #505052;
+        background-color: #505052;
+        color: #e8e8e8;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    #table-body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 10%;
+    }
+
+    .tbl-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 150px;
+        background-color: #101830;
+        color: #e8e8e8;
+    }
+
+    #one-col {
+        width: calc(50% - 2px);
+    }
+
+    .texts-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 2px solid #505052;
+    }
+
+    .texts-container > * {
+        border-top: 1px solid #505052;
+    }
+    .texts-container > *:first-child {
+        border-top: 0;
+    }
+
+    .row-title {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+    }
+
+    .row-title_two-col {
+        display: flex;
+    }
+    .row-title_two-col > *:first-child {
+        width: 40px;
+        flex-shrink: 0;
+        border-left: 1px solid #505052;
+    }
+
+    .row-title span:first-child {
+        font-size: 6px;
+        padding-left: 2px;
+        border-left: 1px solid #505052;
+    }
+    .row-title span:last-child {
+        font-size: 9px;
+        padding-right: 4px;
+    }
+
+    .texts-container > .row-title:first-child,
+    .texts-container > .row-title:last-child {
+        flex-grow: 1;
+    }
+
+    .images-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2px;
+        padding: 4px;
+    }
+
+    #vertical-img {
+        height: 95%;
+    }
+    #vertical-img img {
+        height: 100%;
+    }
+
+    #horizental-img {
+        width: 128px;
+    }
+    </style>
     <body dir="rtl">
         <section class="p-2">
             <div class="information">
@@ -122,7 +270,7 @@ def return_image_tag(addresslist : list):
                 {images_tag}
                 </div>
                 '''
-
+nnnnn= 0
 data = load_object('data')
 for person_data in data:
     main_html_text = pure_html_code
@@ -173,8 +321,9 @@ for person_data in data:
         day_number += 1
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
     if data[person_data]['gender'] != 'میانگین':
+        nnnnn += 1
         file_name = str(person_data).replace(' ' , '_' )
-        with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
+        with open("sport-program-build\\" + f'file{nnnnn}.html' , 'w' , encoding='utf-8') as f:
             f.write(main_html_text)
 
 
