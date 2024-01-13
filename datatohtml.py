@@ -1,7 +1,6 @@
 import pickle
 import re
 from PIL import Image
-import os
 
 pure_html_code = """
     <!DOCTYPE html>
@@ -84,7 +83,6 @@ pure_html_code = """
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
-        margin-bottom: 10%;
     }
 
     .tbl-row {
@@ -162,6 +160,11 @@ pure_html_code = """
 
     #horizental-img {
         width: 128px;
+    }
+
+    .empty-div {
+        width: 100%;
+        background-color: #ffffff;
     }
     </style>
     <body dir="rtl">
@@ -243,7 +246,6 @@ def replacing(to_remove : str , to_replace : str , maintext : str):
     final = range1[1]
     return maintext.replace(maintext[intt:final] , to_replace)
 
-
 def return_image_tag(addresslist : list):
     images_tag = ''''''
     if len(addresslist) == 0:
@@ -274,7 +276,17 @@ def return_image_tag(addresslist : list):
                 {images_tag}
                 </div>
                 '''
-nnnnn= 0
+    
+def check_height(ocupied_height : int , last_html_tag : str , height_last_tag_to_add : int):
+    standard_page_height = 1122 - (2*8)
+    if ocupied_height > standard_page_height:
+        difference = standard_page_height - ocupied_height + height_last_tag_to_add + 20
+        ocupied_height = height_last_tag_to_add
+        empty_tag = f'''<div class="empty-div" style="height: {int(difference)}px">
+                        </div>'''
+        last_html_tag = empty_tag + last_html_tag
+    return ocupied_height , last_html_tag
+
 data = load_object('data')
 for person_data in data:
     main_html_text = pure_html_code
@@ -284,7 +296,9 @@ for person_data in data:
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
     exercise_program = data[person_data]['Program']
     day_number = 0
+    height_counter = 40
     for each_day in exercise_program:
+        height_counter += 30
         table_tag = '''
             <div id="table-container">
                 <div id="table-header">
@@ -298,12 +312,15 @@ for person_data in data:
         all_exercises = [x for i in each_day for x in i]
         all_exercises.sort(key=lambda x:len(x[1]) , reverse=True)
         rows_tag = ''''''
+        count_one_col = 0
         for exercise in all_exercises:
             tag_of_each_row = ''''''
             information_tag = information_in_row
             information_tag = replacing('exna1' , exercise[0] , information_tag)
             if len(exercise[1]) > 2:
-                tag_of_each_row = f'''
+                height_counter += (150 + 4)
+                height_counter, tag_of_each_row = check_height(height_counter , tag_of_each_row , 154 )
+                tag_of_each_row += f'''
                     <div class="tbl-row">
                     {information_tag}
                     {return_image_tag(list(exercise[1]))}
@@ -312,11 +329,15 @@ for person_data in data:
             elif len(exercise[1]) == 0:
                 continue
             else:
-                 tag_of_each_row = f'''
-                    <div class="tbl-row" id="one-col">
-                    {information_tag}
-                    {return_image_tag(list(exercise[1]))}
-                    </div>
+                count_one_col += 1
+                if count_one_col % 2 == 1:
+                    height_counter += (150 + 4)
+                height_counter, tag_of_each_row = check_height(height_counter , tag_of_each_row , 154 )
+                tag_of_each_row += f'''
+                   <div class="tbl-row" id="one-col">
+                   {information_tag}
+                   {return_image_tag(list(exercise[1]))}
+                   </div>
             '''
             rows_tag += tag_of_each_row
         table_tag = replacing('123day_number123' , day[day_number] , table_tag)
@@ -325,7 +346,6 @@ for person_data in data:
         day_number += 1
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
     if data[person_data]['gender'] != 'میانگین':
-        nnnnn += 1
         file_name = str(person_data).replace(' ' , '_' )
         with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
             f.write(main_html_text)
