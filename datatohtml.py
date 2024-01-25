@@ -12,6 +12,16 @@ pure_html_code = """
         <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
     </head>
     <style>
+        :root {
+        --main-color: #101830;
+        --second-color: #e8e8e8;
+        --third-color: #505052;
+        --font-base: 14px;
+        --font-sm: 12px;
+        --font-xs: 10px;
+        --font-2xs: 8px;
+        --font-3xs: 6px;
+    }
     * {
         padding: 0;
         margin: 0;
@@ -49,8 +59,8 @@ pure_html_code = """
         right: 50%;
         transform: translateX(50%);
         padding: 4px 24px;
-        background-color: #e8e8e8;
-        color: #101830;
+        background-color: var(--second-color);
+        color: var(--main-color);
         font-size: 10px;
     }
 
@@ -70,9 +80,9 @@ pure_html_code = """
 
     #table-header {
         padding: 4px 0;
-        border: 2px solid #505052;
-        background-color: #505052;
-        color: #e8e8e8;
+        border: 2px solid var(--third-color);
+        background-color: var(--third-color);
+        color: var(--second-color);
         text-align: center;
         font-size: 12px;
         font-weight: bold;
@@ -90,8 +100,8 @@ pure_html_code = """
         display: grid;
         grid-template-columns: 120px 1fr;
         grid-template-rows: 150px;
-        background-color: #101830;
-        color: #e8e8e8;
+        background-color: var(--main-color);
+        color: var(--second-color);
     }
 
     #one-col {
@@ -102,11 +112,11 @@ pure_html_code = """
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-left: 2px solid #505052;
+        border-left: 2px solid var(--third-color);
     }
 
     .texts-container > * {
-        border-top: 1px solid #505052;
+        border-top: 1px solid var(--third-color);
     }
     .texts-container > *:first-child {
         border-top: 0;
@@ -124,13 +134,13 @@ pure_html_code = """
     .row-title_two-col > *:first-child {
         width: 40px;
         flex-shrink: 0;
-        border-left: 1px solid #505052;
+        border-left: 1px solid var(--third-color);
     }
 
     .row-title span:first-child {
         font-size: 6px;
         padding-left: 2px;
-        border-left: 1px solid #505052;
+        border-left: 1px solid var(--third-color);
     }
     .row-title span:last-child {
         font-size: 9px;
@@ -166,6 +176,37 @@ pure_html_code = """
         width: 100%;
         background-color: #ffffff;
     }
+
+    #table-container-text {
+        margin-bottom: 20px;
+    }
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        color: var(--second-color);
+        margin-top: 15px;
+    }
+    table:first-child {
+        margin-top: 0;
+    }
+    thead {
+        background-color: var(--third-color);
+    }
+    tbody {
+        margin-top: 10px;
+        background-color: var(--main-color);
+    }
+    th {
+        padding: 4px;
+        font-size: var(--font-sm);
+        border: 1px solid var(--main-color);
+    }
+    td {
+        padding: 2px;
+        font-size: 9px;
+        border: 1px solid var(--third-color);
+    }
     </style>
     <body dir="rtl">
         <section class="p-2">
@@ -190,6 +231,32 @@ pure_html_code = """
     </body>
     </html>
 """
+
+txt_table_container = '''
+        <div id="table-container-text">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="7">number_of_day</th>
+                    </tr>
+                    <tr>
+                        <th>تمرین</th>
+                        <th>تکرار</th>
+                        <th>ست</th>
+                        <th>شدت</th>
+                        <th>ضرب آهنگ</th>
+                        <th>استراحت</th>
+                        <th>توضیحات</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    PUT_ALL_TXT_ROWS_HERE
+                </tbody>
+            </table>
+        </div>
+'''
 
 information_in_row = '''
                     <div class="texts-container">
@@ -287,19 +354,22 @@ def check_height(ocupied_height : int , last_html_tag : str , height_last_tag_to
         last_html_tag = empty_tag + last_html_tag
     return ocupied_height , last_html_tag
 
+def chang_color(main_color , second_color , third_color , htmltext):
+    return
+
 data = load_object('data')
 for person_data in data:
     main_html_text = pure_html_code
     all_tables = ''''''
+    all_txt_table_tags = ''''''
     main_html_text = replacing('PUT_PERSON_NAME_HERE!' , str(person_data) , main_html_text)
     main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
     exercise_program = data[person_data]['Program']
     day_number = 0
-    height_counter = 40
     for each_day in exercise_program:
-        height_counter += 30
-        table_tag = '''
+        text_table_tag = txt_table_container
+        img_table_tag = '''
             <div id="table-container">
                 <div id="table-header">
                     123day_number123 
@@ -310,40 +380,40 @@ for person_data in data:
             </div>
     '''
         all_exercises = [x for i in each_day for x in i]
-        all_exercises.sort(key=lambda x:len(x[1]) , reverse=True)
         rows_tag = ''''''
-        count_one_col = 0
+        all_txt_row_tag = ''''''
         for exercise in all_exercises:
-            tag_of_each_row = ''''''
+            txt_row_tag = '''
+                    <tr>
+                        <td>exercise_name</td>
+                        <td>12</td>
+                        <td>4</td>
+                        <td>70-80%</td>
+                        <td>2/0/2</td>
+                        <td>60-90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                '''
+            this_row_tag = ''''''
             information_tag = information_in_row
+            txt_row_tag = replacing('exercise_name' , exercise[0] , txt_row_tag)
             information_tag = replacing('exna1' , exercise[0] , information_tag)
-            if len(exercise[1]) > 2:
-                height_counter += (150 + 4)
-                height_counter, tag_of_each_row = check_height(height_counter , tag_of_each_row , 154 )
-                tag_of_each_row += f'''
-                    <div class="tbl-row">
-                    {information_tag}
-                    {return_image_tag(list(exercise[1]))}
-                    </div>
+            this_row_tag += f'''
+                <div class="tbl-row">
+                {information_tag}
+                {return_image_tag(list(exercise[1]))}
+                </div>
             '''
-            elif len(exercise[1]) == 0:
-                continue
-            else:
-                count_one_col += 1
-                if count_one_col % 2 == 1:
-                    height_counter += (150 + 4)
-                height_counter, tag_of_each_row = check_height(height_counter , tag_of_each_row , 154 )
-                tag_of_each_row += f'''
-                   <div class="tbl-row" id="one-col">
-                   {information_tag}
-                   {return_image_tag(list(exercise[1]))}
-                   </div>
-            '''
-            rows_tag += tag_of_each_row
-        table_tag = replacing('123day_number123' , day[day_number] , table_tag)
-        table_tag = replacing('tablerooooooooooooows' , rows_tag , table_tag)
-        all_tables += table_tag
+            rows_tag += this_row_tag
+            all_txt_row_tag += txt_row_tag
+        img_table_tag = replacing('123day_number123' , day[day_number] , img_table_tag)
+        text_table_tag = replacing('number_of_day' , day[day_number] , text_table_tag)
+        img_table_tag = replacing('tablerooooooooooooows' , rows_tag , img_table_tag)
+        text_table_tag = replacing('PUT_ALL_TXT_ROWS_HERE' , all_txt_row_tag , text_table_tag)
+        all_tables += img_table_tag
+        all_txt_table_tags += text_table_tag
         day_number += 1
+    all_tables = all_txt_table_tags + all_tables
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
     if data[person_data]['gender'] != 'میانگین':
         file_name = str(person_data).replace(' ' , '_' )
