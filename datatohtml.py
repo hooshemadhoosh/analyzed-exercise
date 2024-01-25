@@ -1,4 +1,5 @@
 import pickle
+from pydoc import html
 import re
 from PIL import Image
 
@@ -13,9 +14,9 @@ pure_html_code = """
     </head>
     <style>
         :root {
-        --main-color: #101830;
-        --second-color: #e8e8e8;
-        --third-color: #505052;
+        --main-color: #put_main_color_here;
+        --second-color: #put_second_color_here;
+        --third-color: #put_third_color_here;
         --font-base: 14px;
         --font-sm: 12px;
         --font-xs: 10px;
@@ -354,8 +355,25 @@ def check_height(ocupied_height : int , last_html_tag : str , height_last_tag_to
         last_html_tag = empty_tag + last_html_tag
     return ocupied_height , last_html_tag
 
-def chang_color(main_color , second_color , third_color , htmltext):
-    return
+def chang_color(htmltext , gender):
+    if gender == 'سرکار خانم':
+        #main_color = 'ff0a54' #pink color
+        #sec_color = 'fae0e4' #Black color
+        #third_color = 'ff99ac' #gray color
+        main_color = 'ffffff'
+        sec_color = '000000'
+        third_color = '505052'
+    else:
+        #main_color = '03045e'
+        #sec_color = 'ffffff'
+        #third_color = '0077b6'
+        main_color = 'ffffff'
+        sec_color = '000000'
+        third_color = '505052'
+    htmltext = replacing('put_main_color_here' , main_color , htmltext)
+    htmltext = replacing('put_second_color_here' , sec_color , htmltext)
+    htmltext = replacing('put_third_color_here' , third_color , htmltext)
+    return htmltext
 
 data = load_object('data')
 for person_data in data:
@@ -365,6 +383,7 @@ for person_data in data:
     main_html_text = replacing('PUT_PERSON_NAME_HERE!' , str(person_data) , main_html_text)
     main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
+    main_html_text = chang_color(main_html_text , data[person_data]['gender'])
     exercise_program = data[person_data]['Program']
     day_number = 0
     for each_day in exercise_program:
