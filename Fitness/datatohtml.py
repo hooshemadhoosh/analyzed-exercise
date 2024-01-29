@@ -33,6 +33,9 @@ pure_html_code = """
         padding: 0;
         size: 8.3in 11.7in;
     }
+    thead {
+        display: table-row-group;
+    }
     @font-face {
         font-family: "Vazir";
         src: url("./src/fonts/Vazir-FD-WOL.ttf");
@@ -93,7 +96,6 @@ pure_html_code = """
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 4px;
     }
 
     .tbl-row {
@@ -144,8 +146,8 @@ pure_html_code = """
         border-left: 1px solid var(--third-color);
     }
     .row-title span:last-child {
-        font-size: 9px;
-        padding-right: 4px;
+        font-size: 7px;
+        padding-right: 1px;
     }
 
     .texts-container > .row-title:first-child,
@@ -234,8 +236,8 @@ pure_html_code = """
 """
 
 txt_table_container = '''
+        height=56
         <div id="table-container-text">
-            
             <table>
                 <thead>
                     <tr>
@@ -251,7 +253,6 @@ txt_table_container = '''
                         <th>توضیحات</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     PUT_ALL_TXT_ROWS_HERE
                 </tbody>
@@ -268,7 +269,7 @@ information_in_row = '''
                         <div class="row-title_two-col">                       
                             <span class="row-title">
                                 <span>تکرار</span>
-                                <span>12</span>
+                                <span>repeatations</span>
                             </span>
                             <span class="row-title">
                                 <span>شدت</span>
@@ -278,16 +279,16 @@ information_in_row = '''
                         <div class="row-title_two-col">
                             <span class="row-title">
                                 <span>ست</span>
-                                <span>4</span>
+                                <span>the_number_of_the_sets</span>
                             </span>
                             <span class="row-title">
                                 <span>ضرب آهنگ</span>
-                                <span>2 /0/2</span>
+                                <span>zarb_ahang</span>
                             </span>
                         </div>
                         <span class="row-title">
                             <span>استراحت</span>
-                            <span>60-90 ثانیه</span>
+                            <span>rest_time</span>
                         </span>
                         <span class="row-title">
                             <span>توضیحات</span>
@@ -357,16 +358,16 @@ def check_height(ocupied_height : int , last_html_tag : str , height_last_tag_to
 
 def chang_color(htmltext , gender):
     if gender == 'سرکار خانم':
-        #main_color = 'ff0a54' #pink color
-        #sec_color = 'fae0e4' #Black color
-        #third_color = 'ff99ac' #gray color
+        main_color = 'ff0a54' #pink color
+        sec_color = 'fae0e4' #Black color
+        third_color = 'ff99ac' #gray color
         main_color = 'ffffff'
         sec_color = '000000'
         third_color = '505052'
     else:
-        #main_color = '03045e'
-        #sec_color = 'ffffff'
-        #third_color = '0077b6'
+        main_color = '03045e'
+        sec_color = 'ffffff'
+        third_color = '0077b6'
         main_color = 'ffffff'
         sec_color = '000000'
         third_color = '505052'
@@ -375,6 +376,30 @@ def chang_color(htmltext , gender):
     htmltext = replacing('put_third_color_here' , third_color , htmltext)
     return htmltext
 
+def height_checker(final_html_str : str):
+    ocupied_h = 54
+    standard_height = 1123 - (2*8)
+    while True:
+        result = re.search(r'height=\d+' , final_html_str)
+        if result == None:
+            break
+        start = result.span()[0]
+        end = result.span()[1]
+        numRange = re.search(r'\d+' , final_html_str[start:end]).span()
+        numstart = numRange[0]
+        numend = numRange[1]
+        last_elemant_h = int(final_html_str[start:end][numstart:numend])
+        ocupied_h += last_elemant_h
+        if ocupied_h >= standard_height:
+            difference = standard_height - (ocupied_h - last_elemant_h)
+            final_html_str = final_html_str.replace(final_html_str[start:end] , f'''<div class="empty-div" style="height: {int(difference)}px">
+            </div>''' , 1)
+            ocupied_h = last_elemant_h 
+        else:
+            final_html_str = final_html_str.replace(final_html_str[start:end] , '' , 1)
+    return final_html_str
+
+phases = load_object('./Phase/Phase 1')
 data = load_object('data')
 for person_data in data:
     main_html_text = pure_html_code
@@ -390,26 +415,28 @@ for person_data in data:
         text_table_tag = txt_table_container
         img_table_tag = '''
             <div id="table-container">
+                height=30
                 <div id="table-header">
                     123day_number123 
                 </div>
                 <div id="table-body">
-                    tablerooooooooooooows
+                    TABLEROWS
                 </div>
             </div>
-    '''
+        '''
         all_exercises = [x for i in each_day for x in i]
         rows_tag = ''''''
         all_txt_row_tag = ''''''
         for exercise in all_exercises:
             txt_row_tag = '''
+                    height=19
                     <tr>
                         <td>exercise_name</td>
-                        <td>12</td>
-                        <td>4</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
                         <td>70-80%</td>
-                        <td>2/0/2</td>
-                        <td>60-90 ثانیه</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
                         <td>سوپرست</td>
                     </tr>
                 '''
@@ -417,7 +444,14 @@ for person_data in data:
             information_tag = information_in_row
             txt_row_tag = replacing('exercise_name' , exercise[0] , txt_row_tag)
             information_tag = replacing('exna1' , exercise[0] , information_tag)
+            type_exe = exercise[1][0].split('\\')[1]
+            dict_this_type = phases[type_exe]
+            information_tag , txt_row_tag = replacing('repeatations' , str(dict_this_type['تکرار']) , information_tag) , replacing('repeatations' , str(dict_this_type['تکرار']) , txt_row_tag)
+            information_tag , txt_row_tag = replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , information_tag) , replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , txt_row_tag)
+            information_tag , txt_row_tag = replacing('rest_time' , str(dict_this_type['استراحت']) , information_tag) , replacing('rest_time' , str(dict_this_type['استراحت']) , txt_row_tag)
+            information_tag , txt_row_tag = replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , information_tag) , replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , txt_row_tag) 
             this_row_tag += f'''
+                height=150
                 <div class="tbl-row">
                 {information_tag}
                 {return_image_tag(list(exercise[1]))}
@@ -427,7 +461,7 @@ for person_data in data:
             all_txt_row_tag += txt_row_tag
         img_table_tag = replacing('123day_number123' , day[day_number] , img_table_tag)
         text_table_tag = replacing('number_of_day' , day[day_number] , text_table_tag)
-        img_table_tag = replacing('tablerooooooooooooows' , rows_tag , img_table_tag)
+        img_table_tag = replacing('TABLEROWS' , rows_tag , img_table_tag)
         text_table_tag = replacing('PUT_ALL_TXT_ROWS_HERE' , all_txt_row_tag , text_table_tag)
         all_tables += img_table_tag
         all_txt_table_tags += text_table_tag
@@ -435,6 +469,7 @@ for person_data in data:
     all_tables = all_txt_table_tags + all_tables
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
     if data[person_data]['gender'] != 'میانگین':
+        main_html_text = height_checker(main_html_text)
         file_name = str(person_data).replace(' ' , '_' )
         with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
             f.write(main_html_text)
