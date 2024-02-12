@@ -2,6 +2,7 @@ import pickle
 from pydoc import html
 import re
 from PIL import Image
+import os
 
 pure_html_code = """
     <!DOCTYPE html>
@@ -241,7 +242,7 @@ txt_table_container = '''
             <table>
                 <thead>
                     <tr>
-                        <th colspan="7">number_of_day</th>
+                        <th colspan="7">حرکات اصلاحی</th>
                     </tr>
                     <tr>
                         <th>تمرین</th>
@@ -297,14 +298,14 @@ information_in_row = '''
                     </div>
             '''
 
-source_img_table_tag = '''
+container_of_img_table_tags = '''
             <div id="table-container">
                 height=30
                 <div id="table-header">
-                    123day_number123 
+                    حرکات اصلاحی 
                 </div>
                 <div id="table-body">
-                    TABLEROWS
+                    Put_all_img_table_rows_here!
                 </div>
             </div>
             '''
@@ -429,49 +430,42 @@ phases = load_object('./Phase/Phase 1')
 data = load_object('data')
 for person_data in data:
     main_html_text = pure_html_code
-    all_tables = ''''''
-    all_txt_table_tags = ''''''
     main_html_text = replacing('PUT_PERSON_NAME_HERE!' , str(person_data) , main_html_text)
     main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
     main_html_text = chang_color(main_html_text , data[person_data]['gender'])
     exercise_program = data[person_data]['Program']
-    day_number = 0
-    for each_day in exercise_program:
-        text_table_tag = txt_table_container
-        img_table_tag = source_img_table_tag
-        all_exercises = [x for i in each_day for x in i]
-        rows_tag = ''''''
-        all_txt_row_tag = ''''''
-        for exercise in all_exercises:
+    text_table_tag = txt_table_container
+    img_table_tag = container_of_img_table_tags
+    rows_tag = ''''''
+    all_txt_row_tag = ''''''
+    for ttype in exercise_program:
+        for exercise in ttype:
             txt_row_tag = source_txt_row_tag
-            this_row_tag = ''''''
             information_tag = information_in_row
-            txt_row_tag = replacing('exercise_name' , exercise[0] , txt_row_tag)
-            information_tag = replacing('exna1' , exercise[0] , information_tag)
-            type_exe = exercise[1][0].split('\\')[1]
-            dict_this_type = phases[type_exe]
-            information_tag , txt_row_tag = replacing('repeatations' , str(dict_this_type['تکرار']) , information_tag) , replacing('repeatations' , str(dict_this_type['تکرار']) , txt_row_tag)
-            information_tag , txt_row_tag = replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , information_tag) , replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , txt_row_tag)
-            information_tag , txt_row_tag = replacing('rest_time' , str(dict_this_type['استراحت']) , information_tag) , replacing('rest_time' , str(dict_this_type['استراحت']) , txt_row_tag)
-            information_tag , txt_row_tag = replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , information_tag) , replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , txt_row_tag) 
+            this_row_tag = ''''''
+            txt_row_tag = replacing('exercise_name' , exercise[1][0] , txt_row_tag)
+            information_tag = replacing('exna1' , exercise[1][0] , information_tag)
+            # THESE ARE TAGS TO ADD INFORMATION OF PHASES IN HTML TAGS
+            # type_exe = exercise[1][0].split('\\')[1]
+            # dict_this_type = phases[type_exe]
+            # information_tag , txt_row_tag = replacing('repeatations' , str(dict_this_type['تکرار']) , information_tag) , replacing('repeatations' , str(dict_this_type['تکرار']) , txt_row_tag)
+            # information_tag , txt_row_tag = replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , information_tag) , replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , txt_row_tag)
+            # information_tag , txt_row_tag = replacing('rest_time' , str(dict_this_type['استراحت']) , information_tag) , replacing('rest_time' , str(dict_this_type['استراحت']) , txt_row_tag)
+            # information_tag , txt_row_tag = replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , information_tag) , replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , txt_row_tag) 
+            addresses = [os.path.join('.\\' , exercise[0] , i) for i in exercise[1][1]]
             this_row_tag += f'''
                 height=150
                 <div class="tbl-row">
                 {information_tag}
-                {return_image_tag(list(exercise[1]))}
+                {return_image_tag(addresses)}
                 </div>
             '''
             rows_tag += this_row_tag
             all_txt_row_tag += txt_row_tag
-        img_table_tag = replacing('123day_number123' , day[day_number] , img_table_tag)
-        text_table_tag = replacing('number_of_day' , day[day_number] , text_table_tag)
-        img_table_tag = replacing('TABLEROWS' , rows_tag , img_table_tag)
-        text_table_tag = replacing('PUT_ALL_TXT_ROWS_HERE' , all_txt_row_tag , text_table_tag)
-        all_tables += img_table_tag
-        all_txt_table_tags += text_table_tag
-        day_number += 1
-    all_tables = all_txt_table_tags + all_tables
+    img_table_tag = replacing('Put_all_img_table_rows_here!' , rows_tag , img_table_tag)
+    text_table_tag = replacing('PUT_ALL_TXT_ROWS_HERE' , all_txt_row_tag , text_table_tag)
+    all_tables = text_table_tag + img_table_tag
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
     if data[person_data]['gender'] != 'میانگین':
         main_html_text = height_checker(main_html_text)
