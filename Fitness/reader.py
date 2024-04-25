@@ -40,26 +40,29 @@ def get_exercise_names(dir0):
     print(dir0)
     # dictionary = load_object('FitnessNamesObject')
     names = [name for name in listdir(dir0) if name.endswith('.jpg')]
-    result = {key:[] for key in dictionary}
+    result = {dictionary[key]:[] for key in dictionary}
     for name in names:
-        mach = re.search(r'_\d+[.](jpg|png)',name)
+        mach = re.search(r'(_|\s)\d+[.](jpg|png)',name)
         if mach==None:
             code=name[:-4]
         else:
-            code = name.split('_')[0]
+            code = name[:mach.span()[0]]
+        if code not in dictionary:  
+            print(f"Name is not defined for file '{name}' with name '{code}'.")
+            dictionary[code]=code
+            result[code]=[]
         try:
             result[dictionary[code]]+= [dir0+name]
-        except:
-            print(f"Name is not defined for file {name}")
-            dictionary[code]=code
-            result[code]=[dir0+name]
-    result = {dictionary[key]:tuple(value) for key,value in result.items() if value!=[]}
+        except Exception as E:
+            print(f'An Error Accured for file {name} with code {code}. {result[dictionary[code]]}')
+
+    result = {key:tuple(value) for key,value in result.items() if value!=[]}
     return result
 dirs = {}
 for key,value in kind.items():
     for lev in level:
         dirs[key+lev]=list(get_exercise_names(root+value+'\\'+lev+'\\').items())
-        print(key+lev,dirs[key+lev])
+        # print(key+lev,dirs[key+lev])
 def get_programs(bmi,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),(,),...],...]
     result = []
     for lev in person_level[pers_level]:
