@@ -7,11 +7,11 @@
         <title>Sport Program</title>
         <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
     </head>
-    <style>
-        :root {
+<style>
+    :root {
         --main-color: #ffffff;
         --second-color: #000000;
-        --third-color: #505052;
+        --third-color: #bfaf3e;
         --font-base: 14px;
         --font-sm: 12px;
         --font-xs: 10px;
@@ -28,14 +28,10 @@
         padding: 0;
         size: 8.3in 11.7in;
     }
-    thead {
-        display: table-row-group;
-    }
     @font-face {
         font-family: "Vazir";
         src: url("./src/fonts/Vazir-FD-WOL.ttf");
     }
-
     body {
         font-family: "Vazir";
         font-size: 14px;
@@ -48,19 +44,35 @@
         padding: 8px;
     }
 
+    thead {
+        display: table-row-group;
+    }
+
+    th {
+        color: var(--main-color);
+    }
+
     img {
         max-width: 100%;
     }
 
+    .logo_container {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+
     .information {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         right: 50%;
         transform: translateX(50%);
-        padding: 4px 24px;
-        background-color: var(--second-color);
-        color: var(--main-color);
-        font-size: 10px;
+        padding: 4px 54px;
+        background-color: var(--main-color);
+        color: var(--second-color);
+        font-size: 12px;
     }
 
     .information_contianer {
@@ -68,6 +80,7 @@
         justify-content: center;
         align-items: center;
         column-gap: 32px;
+        font-size: 12px;
     }
 
     .information_texts {
@@ -81,7 +94,7 @@
         padding: 4px 0;
         border: 2px solid var(--third-color);
         background-color: var(--third-color);
-        color: var(--second-color);
+        color: var(--main-color);
         text-align: center;
         font-size: 12px;
         font-weight: bold;
@@ -176,7 +189,7 @@
     }
 
     #table-container-text {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
     table {
         width: 100%;
@@ -209,20 +222,33 @@
     <body dir="rtl">
         <section class="p-2">
             <div class="information">
-                <div class="information_contianer">
-                    <div class="information_texts">
-                        <p>سن</p>
-                        <p>25</p>
+                <div class="logo_container">
+                    <img src="./src/images/logo.jpg" style="width: 100px;" alt="Logo">
+                    <div>
+                        <p style="margin: 6px 0; font-size: 16px;">
+                            مرکز تندرستی و حرکات اصلاحی تن افرا
+                        </p>
+                        <p style="font-size: 12px;">
+                            بلوار نصر خیابان جهانگردی نبش کوچه ۱۱
+                        </p>
                     </div>
-                    <div class="information_texts">
-                        <p>نام و نام خانوادگی</p>
-                        <p>سرکار خانم مرضیه رحیمی</p>
-                    </div>
-                    <div class="information_texts">
-                        <p>BMI</p>
-                        <p>24</p>
-                    </div>
-                </div>            
+                </div>
+                <div>
+                    <div class="information_contianer">
+                        <div class="information_texts">
+                            <p>سن</p>
+                            <p>25</p>
+                        </div>
+                        <div class="information_texts">
+                            <p>نام و نام خانوادگی</p>
+                            <p>سرکار خانم مرضیه رحیمی</p>
+                        </div>
+                        <div class="information_texts">
+                            <p>BMI</p>
+                            <p>24</p>
+                        </div>
+                    </div>            
+                </div>
             </div>
             
         
@@ -246,7 +272,7 @@
                     
                     
                     <tr>
-                        <td>PLANK ROLL-DOWN 01</td>
+                        <td>11</td>
                         <td>12_20</td>
                         <td>1_5</td>
                         <td>70-80%</td>
@@ -257,7 +283,7 @@
                     
                     
                     <tr>
-                        <td>PUSH-UP 03</td>
+                        <td>16</td>
                         <td>12_20</td>
                         <td>1_5</td>
                         <td>70-80%</td>
@@ -268,7 +294,7 @@
                     
                     
                     <tr>
-                        <td>تثبیت ناحیه مرکزی بدن و چرخش دست ها</td>
+                        <td>28</td>
                         <td>12_20</td>
                         <td>1_4</td>
                         <td>70-80%</td>
@@ -279,7 +305,7 @@
                     
                     
                     <tr>
-                        <td>Forward Reach</td>
+                        <td>57</td>
                         <td>12_20     6_10 تک پا</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -290,7 +316,7 @@
                     
                     
                     <tr>
-                        <td>لانچ با دمبل معکوس پرس شانه تک دست</td>
+                        <td>7</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -301,7 +327,7 @@
                     
                     
                     <tr>
-                        <td>شنای صعودی</td>
+                        <td>21</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -312,7 +338,7 @@
                     
                     
                     <tr>
-                        <td>پشت بازو همراه پایین کشیدن سیم کش</td>
+                        <td>71</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -323,7 +349,7 @@
                     
                     
                     <tr>
-                        <td>HAMSTRING STRETCH 02</td>
+                        <td>4</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -357,7 +383,7 @@
                     
                     
                     <tr>
-                        <td>CROSSOVER CRUNCH 01</td>
+                        <td>14</td>
                         <td>12_20</td>
                         <td>1_5</td>
                         <td>70-80%</td>
@@ -368,7 +394,7 @@
                     
                     
                     <tr>
-                        <td>چرخش روسی</td>
+                        <td>19</td>
                         <td>12_20</td>
                         <td>1_5</td>
                         <td>70-80%</td>
@@ -379,7 +405,7 @@
                     
                     
                     <tr>
-                        <td>کرانچ معکوس</td>
+                        <td>24</td>
                         <td>12_20</td>
                         <td>1_4</td>
                         <td>70-80%</td>
@@ -390,7 +416,7 @@
                     
                     
                     <tr>
-                        <td>Partial Tandem - Reach Across Body</td>
+                        <td>70</td>
                         <td>12_20     6_10 تک پا</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -401,7 +427,7 @@
                     
                     
                     <tr>
-                        <td>بلند شدن ترکیه ای</td>
+                        <td>2</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -412,7 +438,7 @@
                     
                     
                     <tr>
-                        <td>کلامشل</td>
+                        <td>20</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -423,7 +449,7 @@
                     
                     
                     <tr>
-                        <td>نشربغل ترکیبی</td>
+                        <td>1</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -434,7 +460,7 @@
                     
                     
                     <tr>
-                        <td>SPINE STRETCH 01</td>
+                        <td>6</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -460,7 +486,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>PLANK ROLL-DOWN 01</span>
+                            <span>11</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -495,8 +521,8 @@
                 
                 <div class="images-container">
                 
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Cardio\Beginner\PLANK ROLL-DOWN 01.jpg" alt="exercise-pic">
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\11_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -509,7 +535,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>PUSH-UP 03</span>
+                            <span>16</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -544,8 +570,8 @@
                 
                 <div class="images-container">
                 
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Cardio\Beginner\PUSH-UP 03.jpg" alt="exercise-pic">
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Cardio\Beginner\16_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -558,7 +584,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>تثبیت ناحیه مرکزی بدن و چرخش دست ها</span>
+                            <span>28</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -594,28 +620,25 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Core\Beginner\تثبیت ناحیه مرکزی بدن و چرخش دست ها_01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Core\Beginner\28_01.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Core\Beginner\تثبیت ناحیه مرکزی بدن و چرخش دست ها_02.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Core\Beginner\تثبیت ناحیه مرکزی بدن و چرخش دست ها_03.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Core\Beginner\28_02.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
                 
                 </div>
             
-                
+                <div class="empty-div" style="height: 101px">
+            </div>
                 <div class="tbl-row">
                 
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Forward Reach</span>
+                            <span>57</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -651,25 +674,36 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Balance\Beginner\Forward Reach_1.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Balance\Beginner\57_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Balance\Beginner\Forward Reach_2.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Balance\Beginner\57_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\57_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\57_4.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Balance\Beginner\57_5.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
                 
                 </div>
             
-                <div class="empty-div" style="height: 7px">
-            </div>
+                
                 <div class="tbl-row">
                 
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>لانچ با دمبل معکوس پرس شانه تک دست</span>
+                            <span>7</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -705,11 +739,11 @@
                 <div class="images-container">
                 
                         <div id="vertical-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\لانچ با دمبل معکوس پرس شانه تک دست_01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Whole body\Beginner\7_01.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="vertical-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\لانچ با دمبل معکوس پرس شانه تک دست_02.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Whole body\Beginner\7_02.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -722,7 +756,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>شنای صعودی</span>
+                            <span>21</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -758,11 +792,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\شنای صعودی_01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Strengthing\Beginner\21_01.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\شنای صعودی_02.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Strengthing\Beginner\21_02.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -775,7 +809,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>پشت بازو همراه پایین کشیدن سیم کش</span>
+                            <span>71</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -811,11 +845,11 @@
                 <div class="images-container">
                 
                         <div id="vertical-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\پشت بازو همراه پایین کشیدن سیم کش_01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Strengthing\Beginner\71_01.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="vertical-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\پشت بازو همراه پایین کشیدن سیم کش_02.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Strengthing\Beginner\71_02.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -828,7 +862,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>HAMSTRING STRETCH 02</span>
+                            <span>4</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -864,7 +898,15 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Stretching\Beginner\HAMSTRING STRETCH 02.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Stretching\Beginner\4_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Beginner\4_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Beginner\4_03.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -887,7 +929,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>CROSSOVER CRUNCH 01</span>
+                            <span>14</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -923,7 +965,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Cardio\Beginner\CROSSOVER CRUNCH 01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Cardio\Beginner\14_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -936,7 +978,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>چرخش روسی</span>
+                            <span>19</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -972,28 +1014,21 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Cardio\Beginner\چرخش روسی_01.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Cardio\Beginner\چرخش روسی_02.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Cardio\Beginner\چرخش روسی_03.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Cardio\Beginner\19_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
                 
                 </div>
             
-                
+                <div class="empty-div" style="height: 27px">
+            </div>
                 <div class="tbl-row">
                 
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>کرانچ معکوس</span>
+                            <span>24</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1029,29 +1064,20 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Core\Beginner\کرانچ معکوس_01.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Core\Beginner\کرانچ معکوس_02.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Core\Beginner\کرانچ معکوس_03.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Core\Beginner\24_01.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
                 
                 </div>
             
-                <div class="empty-div" style="height: 27px">
-            </div>
+                
                 <div class="tbl-row">
                 
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Partial Tandem - Reach Across Body</span>
+                            <span>70</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1087,11 +1113,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Balance\Beginner\Partial Tandem - Reach Across Body_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Balance\Beginner\Partial Tandem - Reach Across Body_2.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Balance\Beginner\70_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1104,125 +1126,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>بلند شدن ترکیه ای</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\بلند شدن ترکیه ای_01.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\بلند شدن ترکیه ای_02.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\بلند شدن ترکیه ای_03.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\بلند شدن ترکیه ای_04.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Whole body\Beginner\بلند شدن ترکیه ای_05.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>کلامشل</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\کلامشل_01.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\کلامشل_02.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>نشربغل ترکیبی</span>
+                            <span>2</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1258,11 +1162,15 @@
                 <div class="images-container">
                 
                         <div id="vertical-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\نشربغل ترکیبی_01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Whole body\Beginner\2_01.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="vertical-img">
-                            <img src="..\Fitness_Backup\Strengthing\Beginner\نشربغل ترکیبی_02.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Whole body\Beginner\2_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Whole body\Beginner\2_03.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1275,7 +1183,113 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>SPINE STRETCH 01</span>
+                            <span>20</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Strengthing\Beginner\20_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Strengthing\Beginner\20_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>1</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Beginner\1_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="vertical-img">
+                            <img src="..\Fitness\Strengthing\Beginner\1_02.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>6</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1311,7 +1325,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\Fitness_Backup\Stretching\Beginner\SPINE STRETCH 01.jpg" alt="exercise-pic">
+                            <img src="..\Fitness\Stretching\Beginner\6_01.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\Fitness\Stretching\Beginner\6_03.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>

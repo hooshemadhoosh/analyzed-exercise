@@ -8,10 +8,10 @@
         <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
     </head>
     <style>
-        :root {
+    :root {
         --main-color: #ffffff;
         --second-color: #000000;
-        --third-color: #505052;
+        --third-color: #bfaf3e;
         --font-base: 14px;
         --font-sm: 12px;
         --font-xs: 10px;
@@ -28,14 +28,10 @@
         padding: 0;
         size: 8.3in 11.7in;
     }
-    thead {
-        display: table-row-group;
-    }
     @font-face {
         font-family: "Vazir";
         src: url("./src/fonts/Vazir-FD-WOL.ttf");
     }
-
     body {
         font-family: "Vazir";
         font-size: 14px;
@@ -48,19 +44,35 @@
         padding: 8px;
     }
 
+    thead {
+        display: table-row-group;
+    }
+
+    th {
+        color: var(--main-color);
+    }
+
     img {
         max-width: 100%;
     }
 
+    .logo_container {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+
     .information {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         right: 50%;
         transform: translateX(50%);
-        padding: 4px 24px;
-        background-color: var(--second-color);
-        color: var(--main-color);
-        font-size: 10px;
+        padding: 4px 54px;
+        background-color: var(--main-color);
+        color: var(--second-color);
+        font-size: 12px;
     }
 
     .information_contianer {
@@ -68,6 +80,7 @@
         justify-content: center;
         align-items: center;
         column-gap: 32px;
+        font-size: 12px;
     }
 
     .information_texts {
@@ -81,7 +94,7 @@
         padding: 4px 0;
         border: 2px solid var(--third-color);
         background-color: var(--third-color);
-        color: var(--second-color);
+        color: var(--main-color);
         text-align: center;
         font-size: 12px;
         font-weight: bold;
@@ -209,20 +222,33 @@
     <body dir="rtl">
         <section class="p-2">
             <div class="information">
-                <div class="information_contianer">
-                    <div class="information_texts">
-                        <p>سن</p>
-                        <p></p>
+                <div class="logo_container">
+                    <img src="./src/images/logo.jpg" style="width: 100px;" alt="Logo">
+                    <div>
+                        <p style="margin: 6px 0; font-size: 16px;">
+                            مرکز تندرستی و حرکات اصلاحی تن افرا
+                        </p>
+                        <p style="font-size: 12px;">
+                            بلوار نصر خیابان جهانگردی نبش کوچه ۱۱
+                        </p>
                     </div>
-                    <div class="information_texts">
-                        <p>نام و نام خانوادگی</p>
-                        <p>سر کار خانم مرضیه رحیمی</p>
-                    </div>
-                    <div class="information_texts">
-                        <p>BMI</p>
-                        <p>24.2</p>
-                    </div>
-                </div>            
+                </div>
+                <div>
+                    <div class="information_contianer">
+                        <div class="information_texts">
+                            <p>سن</p>
+                            <p></p>
+                        </div>
+                        <div class="information_texts">
+                            <p>نام و نام خانوادگی</p>
+                            <p>سر کار خانم مرضیه رحیمی</p>
+                        </div>
+                        <div class="information_texts">
+                            <p>BMI</p>
+                            <p>24.2</p>
+                        </div>
+                    </div>            
+                </div>
             </div>
             
         
@@ -246,7 +272,7 @@
                     
                     
                     <tr>
-                        <td>IT-band</td>
+                        <td>TFL</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -257,7 +283,7 @@
                     
                     
                     <tr>
-                        <td>Pelvis Rotation</td>
+                        <td>Hip Adduction AROM (Countertop)</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -268,7 +294,7 @@
                     
                     
                     <tr>
-                        <td>جنگجوی بالا</td>
+                        <td>Heel Slides - Alternating</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -279,11 +305,22 @@
                     
                     
                     <tr>
-                        <td>Heel Slides (Slideboard + Belt)</td>
+                        <td>Assisted Hip Internal + External Rotation</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
                         <td>30ثانیه</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>خم شدن زانوهای دمر - محدوده کامل</td>
+                        <td>12_20</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>آرام</td>
                         <td>0_90 ثانیه</td>
                         <td>سوپرست</td>
                     </tr>
@@ -301,18 +338,7 @@
                     
                     
                     <tr>
-                        <td>Hip Flexion Isometric - Inner Range (Band)</td>
-                        <td>12_20</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>آرام</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>دور شدن ران - بازشدن 45 درجه</td>
+                        <td>پایین آمدن + لمس (پشتیبانی)</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -345,7 +371,7 @@
                     
                     
                     <tr>
-                        <td>خم شدن زانو دامنه حرکتی2</td>
+                        <td>تا کردن به جلو تا نیمه راه بالابردن - دست ها زیر پا</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -356,7 +382,7 @@
                     
                     
                     <tr>
-                        <td>Pelvis Rotation</td>
+                        <td>Z-Lying</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -367,7 +393,7 @@
                     
                     
                     <tr>
-                        <td> کشش پیریفورمیس کمکی</td>
+                        <td>زاویه بازشده1</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -378,7 +404,7 @@
                     
                     
                     <tr>
-                        <td>Hip External Rotation (Band)2</td>
+                        <td>Knee Flexion Machine</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -389,7 +415,7 @@
                     
                     
                     <tr>
-                        <td>خم شدن زانوهای دمر - محدوده اولیه</td>
+                        <td>Hip Abduction (Band)5</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -400,7 +426,7 @@
                     
                     
                     <tr>
-                        <td>Prone Knee Bend - Dorsiflexion</td>
+                        <td>چرخش خارجی ران ایزومتریک</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -437,7 +463,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>IT-band</span>
+                            <span>TFL</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -473,7 +499,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\IT-band.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\TFL.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -486,7 +512,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Pelvis Rotation</span>
+                            <span>Hip Adduction AROM (Countertop)</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -522,15 +548,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Pelvis Rotation_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Pelvis Rotation_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Pelvis Rotation_3.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Hip Adduction AROM (Countertop)_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -543,7 +561,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>جنگجوی بالا</span>
+                            <span>Heel Slides - Alternating</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -579,7 +597,15 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\High Warrior_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides - Alternating_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides - Alternating_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides - Alternating_3.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -592,7 +618,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Heel Slides (Slideboard + Belt)</span>
+                            <span>Assisted Hip Internal + External Rotation</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -628,11 +654,23 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides (Slideboard + Belt)_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Assisted Hip Internal + External Rotation_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides (Slideboard + Belt)_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Assisted Hip Internal + External Rotation_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Assisted Hip Internal + External Rotation_4.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Assisted Hip Internal + External Rotation_5.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Assisted Hip Internal + External Rotation_6.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -641,6 +679,59 @@
             
                 <div class="empty-div" style="height: 63px">
             </div>
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>خم شدن زانوهای دمر - محدوده کامل</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Prone Knee Flexion - Full Range_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Prone Knee Flexion - Full Range_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
                 <div class="tbl-row">
                 
                     <div class="texts-container">
@@ -699,7 +790,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Hip Flexion Isometric - Inner Range (Band)</span>
+                            <span>پایین آمدن + لمس (پشتیبانی)</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -735,64 +826,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Iliopsoas\Hip Flexion Isometric - Inner Range (Band)_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Step Down + Touch (Support)_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Iliopsoas\Hip Flexion Isometric - Inner Range (Band)_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>دور شدن ران - بازشدن 45 درجه</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction - 45° Extension_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction - 45° Extension_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Step Down + Touch (Support)_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -903,7 +941,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>خم شدن زانو دامنه حرکتی2</span>
+                            <span>تا کردن به جلو تا نیمه راه بالابردن - دست ها زیر پا</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -939,11 +977,19 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Knee Flexion AROM2_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Forward Fold To Halfway Lift- Hands Under Feet_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Knee Flexion AROM2_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Forward Fold To Halfway Lift- Hands Under Feet_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Forward Fold To Halfway Lift- Hands Under Feet_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Forward Fold To Halfway Lift- Hands Under Feet_4.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -956,7 +1002,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Pelvis Rotation</span>
+                            <span>Z-Lying</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -992,15 +1038,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Pelvis Rotation_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Pelvis Rotation_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Pelvis Rotation_3.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Z-Lying_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1014,7 +1052,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span> کشش پیریفورمیس کمکی</span>
+                            <span>زاویه بازشده1</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1050,15 +1088,31 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Assisted Piriformis Stretch_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Assisted Piriformis Stretch_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_2.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Assisted Piriformis Stretch_3.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_4.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_5.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_6.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Extended Angle1_7.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1071,7 +1125,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Hip External Rotation (Band)2</span>
+                            <span>Knee Flexion Machine</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1107,11 +1161,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\External Rotation (ER)\Hip External Rotation (Band)2_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Knee Flexion Machine_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\External Rotation (ER)\Hip External Rotation (Band)2_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Knee Flexion Machine_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1124,7 +1178,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>خم شدن زانوهای دمر - محدوده اولیه</span>
+                            <span>Hip Abduction (Band)5</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1160,11 +1214,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Early Range\Prone Knee Flexion - Early Range_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction (Band)5_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Early Range\Prone Knee Flexion - Early Range_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction (Band)5_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1177,7 +1231,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Prone Knee Bend - Dorsiflexion</span>
+                            <span>چرخش خارجی ران ایزومتریک</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1213,11 +1267,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Prone Knee Bend - Dorsiflexion_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Prone Knee Bend - Dorsiflexion_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\External Rotation (ER)\Hip External Rotation Isometric_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>

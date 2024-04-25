@@ -8,10 +8,10 @@
         <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
     </head>
     <style>
-        :root {
+    :root {
         --main-color: #ffffff;
         --second-color: #000000;
-        --third-color: #505052;
+        --third-color: #bfaf3e;
         --font-base: 14px;
         --font-sm: 12px;
         --font-xs: 10px;
@@ -28,14 +28,10 @@
         padding: 0;
         size: 8.3in 11.7in;
     }
-    thead {
-        display: table-row-group;
-    }
     @font-face {
         font-family: "Vazir";
         src: url("./src/fonts/Vazir-FD-WOL.ttf");
     }
-
     body {
         font-family: "Vazir";
         font-size: 14px;
@@ -48,19 +44,35 @@
         padding: 8px;
     }
 
+    thead {
+        display: table-row-group;
+    }
+
+    th {
+        color: var(--main-color);
+    }
+
     img {
         max-width: 100%;
     }
 
+    .logo_container {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+
     .information {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         right: 50%;
         transform: translateX(50%);
-        padding: 4px 24px;
-        background-color: var(--second-color);
-        color: var(--main-color);
-        font-size: 10px;
+        padding: 4px 54px;
+        background-color: var(--main-color);
+        color: var(--second-color);
+        font-size: 12px;
     }
 
     .information_contianer {
@@ -68,6 +80,7 @@
         justify-content: center;
         align-items: center;
         column-gap: 32px;
+        font-size: 12px;
     }
 
     .information_texts {
@@ -81,7 +94,7 @@
         padding: 4px 0;
         border: 2px solid var(--third-color);
         background-color: var(--third-color);
-        color: var(--second-color);
+        color: var(--main-color);
         text-align: center;
         font-size: 12px;
         font-weight: bold;
@@ -209,20 +222,33 @@
     <body dir="rtl">
         <section class="p-2">
             <div class="information">
-                <div class="information_contianer">
-                    <div class="information_texts">
-                        <p>سن</p>
-                        <p></p>
+                <div class="logo_container">
+                    <img src="./src/images/logo.jpg" style="width: 100px;" alt="Logo">
+                    <div>
+                        <p style="margin: 6px 0; font-size: 16px;">
+                            مرکز تندرستی و حرکات اصلاحی تن افرا
+                        </p>
+                        <p style="font-size: 12px;">
+                            بلوار نصر خیابان جهانگردی نبش کوچه ۱۱
+                        </p>
                     </div>
-                    <div class="information_texts">
-                        <p>نام و نام خانوادگی</p>
-                        <p>جناب آقای مهدی حافظپور</p>
-                    </div>
-                    <div class="information_texts">
-                        <p>BMI</p>
-                        <p>22.1</p>
-                    </div>
-                </div>            
+                </div>
+                <div>
+                    <div class="information_contianer">
+                        <div class="information_texts">
+                            <p>سن</p>
+                            <p></p>
+                        </div>
+                        <div class="information_texts">
+                            <p>نام و نام خانوادگی</p>
+                            <p>جناب آقای مهدی حافظپور</p>
+                        </div>
+                        <div class="information_texts">
+                            <p>BMI</p>
+                            <p>22.1</p>
+                        </div>
+                    </div>            
+                </div>
             </div>
             
         
@@ -246,7 +272,7 @@
                     
                     
                     <tr>
-                        <td>IT-band</td>
+                        <td>TFL</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -257,84 +283,7 @@
                     
                     
                     <tr>
-                        <td>کشش آبداکتور و ایلیوتیبیال1</td>
-                        <td>1</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>30ثانیه</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>خم شدن زانو - خود کمکی</td>
-                        <td>1</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>30ثانیه</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>Knee Flexion Stretch-PROM</td>
-                        <td>1</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>30ثانیه</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>Side Lunge (Barbell)</td>
-                        <td>12_20</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>آرام</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>Hip D2 Pattern - Ascending (Band)</td>
-                        <td>12_20</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>آرام</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>Hip Internal Rotation - 90 Flexion (Band)</td>
-                        <td>12_20</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>آرام</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>پایین آمدن جانبی استپ</td>
-                        <td>12_20</td>
-                        <td>1_3</td>
-                        <td>70-80%</td>
-                        <td>آرام</td>
-                        <td>0_90 ثانیه</td>
-                        <td>سوپرست</td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>IT-band</td>
+                        <td>کشش آبداکتور و ایلیوتیبیال2</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -356,7 +305,84 @@
                     
                     
                     <tr>
-                        <td>تا کردن به جلو - بازوهای جمع شده</td>
+                        <td>Hip IR - ER AROM</td>
+                        <td>1</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>30ثانیه</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Knee Flexion Machine - Single Leg</td>
+                        <td>12_20</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>آرام</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>خم شدن زانوهای دمر - محدوده اولیه</td>
+                        <td>12_20</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>آرام</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>لمس پایین آمدن </td>
+                        <td>12_20</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>آرام</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>استپ تاپ جانبی با درایو زانو + حلقه دو سر بازو</td>
+                        <td>12_20</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>آرام</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>IT-band</td>
+                        <td>1</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>30ثانیه</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>چرخش داخلی + خارجی لگن دامنه حرکتی2</td>
+                        <td>1</td>
+                        <td>1_3</td>
+                        <td>70-80%</td>
+                        <td>30ثانیه</td>
+                        <td>0_90 ثانیه</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td> کشش پیریفورمیس کمکی</td>
                         <td>1</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -378,7 +404,7 @@
                     
                     
                     <tr>
-                        <td>دور شدن ران - بازشدن 45 درجه</td>
+                        <td>دامنه حرکتی خم شدن و بازشدن ران - زانو صاف (صندلی)</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -389,7 +415,7 @@
                     
                     
                     <tr>
-                        <td>خم شدن زانوهای دمر - محدوده کامل</td>
+                        <td>Hip Abduction Supported (Band at Knees)</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -400,7 +426,7 @@
                     
                     
                     <tr>
-                        <td>Straight Leg Raise  - Core Activated (Band)</td>
+                        <td>Hip External Rotation (Band)3</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -411,7 +437,7 @@
                     
                     
                     <tr>
-                        <td>استپ تاپ جانبی با درایو زانو + حلقه دو سر بازو</td>
+                        <td>بالا رفتن جانبی استپ و جلو بازو</td>
                         <td>12_20</td>
                         <td>1_3</td>
                         <td>70-80%</td>
@@ -437,7 +463,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>IT-band</span>
+                            <span>TFL</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -473,7 +499,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\IT-band.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\TFL.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -486,7 +512,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>کشش آبداکتور و ایلیوتیبیال1</span>
+                            <span>کشش آبداکتور و ایلیوتیبیال2</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -522,391 +548,7 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Hip Abductor + ITB Stretch1_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Hip Abductor + ITB Stretch1_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Hip Abductor + ITB Stretch1_3.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>خم شدن زانو - خود کمکی</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>1</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>30ثانیه</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Knee Flexion - Self-Assisted_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Knee Flexion - Self-Assisted_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>Knee Flexion Stretch-PROM</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>1</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>30ثانیه</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Knee Flexion Stretch-PROM_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Knee Flexion Stretch-PROM_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                <div class="empty-div" style="height: 63px">
-            </div>
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>Side Lunge (Barbell)</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Side Lunge (Barbell)_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Side Lunge (Barbell)_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Side Lunge (Barbell)_3.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Side Lunge (Barbell)_4.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>Hip D2 Pattern - Ascending (Band)</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Iliopsoas\Hip D2 Pattern - Ascending (Band)_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Iliopsoas\Hip D2 Pattern - Ascending (Band)_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>Hip Internal Rotation - 90 Flexion (Band)</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Hip Internal Rotation - 90 Flexion (Band)_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Hip Internal Rotation - 90 Flexion (Band)_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>پایین آمدن جانبی استپ</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>12_20</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>آرام</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step down_1.jpg" alt="exercise-pic">
-                        </div>
-                        
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step down_2.jpg" alt="exercise-pic">
-                        </div>
-                        
-                </div>
-                
-                </div>
-            
-                
-                <div class="tbl-row">
-                
-                    <div class="texts-container">
-                        <span class="row-title">
-                            <span>تمرین</span>
-                            <span>IT-band</span>
-                        </span>
-                        <div class="row-title_two-col">                       
-                            <span class="row-title">
-                                <span>تکرار</span>
-                                <span>1</span>
-                            </span>
-                            <span class="row-title">
-                                <span>شدت</span>
-                                <span>70-80%</span>
-                            </span>
-                        </div>
-                        <div class="row-title_two-col">
-                            <span class="row-title">
-                                <span>ست</span>
-                                <span>1_3</span>
-                            </span>
-                            <span class="row-title">
-                                <span>ضرب آهنگ</span>
-                                <span>30ثانیه</span>
-                            </span>
-                        </div>
-                        <span class="row-title">
-                            <span>استراحت</span>
-                            <span>0_90 ثانیه</span>
-                        </span>
-                        <span class="row-title">
-                            <span>توضیحات</span>
-                            <span>سوپر ست</span>
-                        </span>
-                    </div>
-            
-                
-                <div class="images-container">
-                
-                        <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\IT-band.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Hip Abductor + ITB Stretch2_1.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -976,7 +618,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>تا کردن به جلو - بازوهای جمع شده</span>
+                            <span>Hip IR - ER AROM</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1012,11 +654,387 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Forward Fold - Arms Folded_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Hip IR - ER AROM_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Forward Fold - Arms Folded_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Hip IR - ER AROM_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Hip IR - ER AROM_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                <div class="empty-div" style="height: 63px">
+            </div>
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Knee Flexion Machine - Single Leg</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Knee Flexion Machine - Single Leg_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Knee Flexion Machine - Single Leg_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>خم شدن زانوهای دمر - محدوده اولیه</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Early Range\Prone Knee Flexion - Early Range_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Early Range\Prone Knee Flexion - Early Range_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>لمس پایین آمدن </span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Step Down Touch_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Step Down Touch_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>استپ تاپ جانبی با درایو زانو + حلقه دو سر بازو</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>12_20</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>آرام</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step Up with Knee Drive + Bicep Curl_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>IT-band</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>1</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>30ثانیه</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\IT-band.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>چرخش داخلی + خارجی لگن دامنه حرکتی2</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>1</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>30ثانیه</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Hip Internal + External Rotation AROM2_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Hip Internal + External Rotation AROM2_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Hip Internal + External Rotation AROM2_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span> کشش پیریفورمیس کمکی</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>1</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>1_3</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>30ثانیه</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>0_90 ثانیه</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Assisted Piriformis Stretch_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Assisted Piriformis Stretch_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Adduction\Assisted Piriformis Stretch_3.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1087,7 +1105,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>دور شدن ران - بازشدن 45 درجه</span>
+                            <span>دامنه حرکتی خم شدن و بازشدن ران - زانو صاف (صندلی)</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1123,11 +1141,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction - 45° Extension_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Iliopsoas\Hip Flexion and Extension AROM - Straight Knee (Chair)_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction - 45° Extension_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Iliopsoas\Hip Flexion and Extension AROM - Straight Knee (Chair)_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1140,7 +1158,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>خم شدن زانوهای دمر - محدوده کامل</span>
+                            <span>Hip Abduction Supported (Band at Knees)</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1176,11 +1194,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Prone Knee Flexion - Full Range_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction Supported (Band at Knees)_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Full Range\Prone Knee Flexion - Full Range_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction Supported (Band at Knees)_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1193,7 +1211,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>Straight Leg Raise  - Core Activated (Band)</span>
+                            <span>Hip External Rotation (Band)3</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1229,11 +1247,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Straight Leg Raise  - Core Activated (Band)_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\External Rotation (ER)\Hip External Rotation (Band)3_1.jpg" alt="exercise-pic">
                         </div>
                         
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Straight Leg Raise  - Core Activated (Band)_2.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\External Rotation (ER)\Hip External Rotation (Band)3_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>
@@ -1246,7 +1264,7 @@
                     <div class="texts-container">
                         <span class="row-title">
                             <span>تمرین</span>
-                            <span>استپ تاپ جانبی با درایو زانو + حلقه دو سر بازو</span>
+                            <span>بالا رفتن جانبی استپ و جلو بازو</span>
                         </span>
                         <div class="row-title_two-col">                       
                             <span class="row-title">
@@ -1282,7 +1300,11 @@
                 <div class="images-container">
                 
                         <div id="horizental-img">
-                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step Up with Knee Drive + Bicep Curl_1.jpg" alt="exercise-pic">
+                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step Up + Bicep Curl_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step Up + Bicep Curl_2.jpg" alt="exercise-pic">
                         </div>
                         
                 </div>

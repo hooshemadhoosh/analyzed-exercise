@@ -14,10 +14,10 @@ pure_html_code = """
         <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
     </head>
     <style>
-        :root {
-        --main-color: #put_main_color_here;
-        --second-color: #put_second_color_here;
-        --third-color: #put_third_color_here;
+    :root {
+        --main-color: #ffffff;
+        --second-color: #000000;
+        --third-color: #bfaf3e;
         --font-base: 14px;
         --font-sm: 12px;
         --font-xs: 10px;
@@ -34,14 +34,10 @@ pure_html_code = """
         padding: 0;
         size: 8.3in 11.7in;
     }
-    thead {
-        display: table-row-group;
-    }
     @font-face {
         font-family: "Vazir";
         src: url("./src/fonts/Vazir-FD-WOL.ttf");
     }
-
     body {
         font-family: "Vazir";
         font-size: 14px;
@@ -54,19 +50,35 @@ pure_html_code = """
         padding: 8px;
     }
 
+    thead {
+        display: table-row-group;
+    }
+
+    th {
+        color: var(--main-color);
+    }
+
     img {
         max-width: 100%;
     }
 
+    .logo_container {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+    }
+
     .information {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
         right: 50%;
         transform: translateX(50%);
-        padding: 4px 24px;
-        background-color: var(--second-color);
-        color: var(--main-color);
-        font-size: 10px;
+        padding: 4px 54px;
+        background-color: var(--main-color);
+        color: var(--second-color);
+        font-size: 12px;
     }
 
     .information_contianer {
@@ -74,6 +86,7 @@ pure_html_code = """
         justify-content: center;
         align-items: center;
         column-gap: 32px;
+        font-size: 12px;
     }
 
     .information_texts {
@@ -87,7 +100,7 @@ pure_html_code = """
         padding: 4px 0;
         border: 2px solid var(--third-color);
         background-color: var(--third-color);
-        color: var(--second-color);
+        color: var(--main-color);
         text-align: center;
         font-size: 12px;
         font-weight: bold;
@@ -215,20 +228,33 @@ pure_html_code = """
     <body dir="rtl">
         <section class="p-2">
             <div class="information">
-                <div class="information_contianer">
-                    <div class="information_texts">
-                        <p>سن</p>
-                        <p>PUT_AGE_HERE!</p>
+                <div class="logo_container">
+                    <img src="./src/images/logo.jpg" style="width: 100px;" alt="Logo">
+                    <div>
+                        <p style="margin: 6px 0; font-size: 16px;">
+                            مرکز تندرستی و حرکات اصلاحی تن افرا
+                        </p>
+                        <p style="font-size: 12px;">
+                            بلوار نصر خیابان جهانگردی نبش کوچه ۱۱
+                        </p>
                     </div>
-                    <div class="information_texts">
-                        <p>نام و نام خانوادگی</p>
-                        <p>PUT_PERSON_NAME_HERE!</p>
-                    </div>
-                    <div class="information_texts">
-                        <p>BMI</p>
-                        <p>PUT_BMI_VALUE_HERE!</p>
-                    </div>
-                </div>            
+                </div>
+                <div>
+                    <div class="information_contianer">
+                        <div class="information_texts">
+                            <p>سن</p>
+                            <p>PUT_AGE_HERE!</p>
+                        </div>
+                        <div class="information_texts">
+                            <p>نام و نام خانوادگی</p>
+                            <p>PUT_PERSON_NAME_HERE!</p>
+                        </div>
+                        <div class="information_texts">
+                            <p>BMI</p>
+                            <p>PUT_BMI_VALUE_HERE!</p>
+                        </div>
+                    </div>            
+                </div>
             </div>
             PUT ALL TABLES HERE!
         </section>
@@ -447,7 +473,7 @@ for person_data in data:
         bmi_value = round(weight/height**2,1)
         main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(bmi_value) , main_html_text)
     
-    main_html_text = chang_color(main_html_text , genderofperson)
+    #main_html_text = chang_color(main_html_text , genderofperson)
     exercise_program = data[person_data]['Program']
     exercise_program2 = [i for x in exercise_program for i in x]
     # print (data[person_data]['PERSON_LEVEL'])
