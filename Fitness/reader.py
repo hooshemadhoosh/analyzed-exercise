@@ -1,10 +1,11 @@
 from math import nan
+import re
 import pandas as pd
 import pickle
 from os import listdir
 import random
 
-root = "Fitness\\"
+root = "Fitness_Backup\\"
 kind = {'A':"Cardio" , 'B' : 'Core' , 'C': 'Balance', 'D': 'Whole body' , 'E': 'Strengthing' , 'F': 'Stretching'}
 level = {'Beginner':0,'Intermediate':1,'Advanced':2}
 person_level = {'بی تحرک':('Beginner' , 'Beginner') ,
@@ -32,24 +33,33 @@ def load_object(filename):
             return pickle.load(f)
     except Exception as ex:
         print("Error during unpickling object (Possibly unsupported):", ex)
+
+file = pd.read_csv('Fitness.csv',encoding='UTF-8')
+dictionary = {str(file['name'][i]):file['translation'][i] for i in range(len(file['name']))}
 def get_exercise_names(dir0):
     print(dir0)
-    file = pd.read_csv(dir0+'dictionary.csv',encoding='UTF-8')
-    dictionary = {str(file['code'][i]):file['name'][i] for i in range(len(file['code']))}
+    # dictionary = load_object('FitnessNamesObject')
     names = [name for name in listdir(dir0) if name.endswith('.jpg')]
     result = {key:[] for key in dictionary}
     for name in names:
-        code = name.split('_')[0]
+        mach = re.search(r'_\d+[.](jpg|png)',name)
+        if mach==None:
+            code=name[:-4]
+        else:
+            code = name.split('_')[0]
         try:
-            result[code]+= [dir0+name]
+            result[dictionary[code]]+= [dir0+name]
         except:
-            print("Name is not defined for a file...")
-    result = {dictionary[key]:tuple(value) for key,value in result.items()}
+            print(f"Name is not defined for file {name}")
+            dictionary[code]=code
+            result[code]=[dir0+name]
+    result = {dictionary[key]:tuple(value) for key,value in result.items() if value!=[]}
     return result
 dirs = {}
 for key,value in kind.items():
     for lev in level:
         dirs[key+lev]=list(get_exercise_names(root+value+'\\'+lev+'\\').items())
+        print(key+lev,dirs[key+lev])
 def get_programs(bmi,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),(,),...],...]
     result = []
     for lev in person_level[pers_level]:
@@ -79,7 +89,6 @@ for key,value in data.items():
     data[key]=value
 for key,value in data.items():
     temp = value
-
     temp['Program']=get_programs(value['BMI'],value['PERSON_LEVEL'].lower())
     data[key]=temp
 
@@ -89,3 +98,4 @@ for key,value in data.items():
 # pprint.PrettyPrinter(indent=4,width=30).pprint(dirs) 
 # pprint.PrettyPrinter(indent=4,width=30).pprint(data)    
 save_object(data,'data')
+input("******Done******")
