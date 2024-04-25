@@ -426,20 +426,31 @@ def height_checker(final_html_str : str):
             final_html_str = final_html_str.replace(final_html_str[start:end] , '' , 1)
     return final_html_str
 
-phases = load_object('./Phase/Phase 1')
+#phases = load_object('./Phase/Phase 1')
 data = load_object('data')
+corrective_names = load_object('CorrectiveNamesObject')
+print (corrective_names)
+#print (data)
+#repeattions = 0
 for person_data in data:
+    # repeattions += 1
+    # print ("repeated times:" , repeattions)
+    # print (data[person_data])
     main_html_text = pure_html_code
     main_html_text = replacing('PUT_PERSON_NAME_HERE!' , str(person_data) , main_html_text)
-    main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(int(float(data[str(person_data)]['BMI_VALUE']))) , main_html_text)
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
+    if data[person_data]['وزن'] != '' and data[person_data]['قد']!='':
+        weight = float(data[person_data]['وزن'])
+        height = float(data[person_data]['قد'])/100
+        bmi_value = round(weight/height**2,1)
+        main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(bmi_value) , main_html_text)
     main_html_text = chang_color(main_html_text , data[person_data]['gender'])
     exercise_program = data[person_data]['Program']
     text_table_tag = txt_table_container
     img_table_tag = container_of_img_table_tags
     rows_tag = ''''''
     all_txt_row_tag = ''''''
-    for ttype in exercise_program:
+    for ttype in exercise_program[0]:
         for exercise in ttype:
             txt_row_tag = source_txt_row_tag
             information_tag = information_in_row
@@ -472,6 +483,5 @@ for person_data in data:
         file_name = str(person_data).replace(' ' , '_' )
         with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
             f.write(main_html_text)
-
 
                 

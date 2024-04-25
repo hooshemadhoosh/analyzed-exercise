@@ -1,0 +1,772 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sport Program</title>
+        <!--<link rel="stylesheet" href="file:///C:/Users/Padidar/analyzed-exercise/sport-program-build/src/css/main.css">-->
+    </head>
+    <style>
+        :root {
+        --main-color: #ffffff;
+        --second-color: #000000;
+        --third-color: #505052;
+        --font-base: 14px;
+        --font-sm: 12px;
+        --font-xs: 10px;
+        --font-2xs: 8px;
+        --font-3xs: 6px;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    @page {
+        margin: 0;
+        padding: 0;
+        size: 8.3in 11.7in;
+    }
+    thead {
+        display: table-row-group;
+    }
+    @font-face {
+        font-family: "Vazir";
+        src: url("./src/fonts/Vazir-FD-WOL.ttf");
+    }
+
+    body {
+        font-family: "Vazir";
+        font-size: 14px;
+        overflow-x: hidden;
+        margin: auto;
+        width: 210mm;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .information {
+        display: inline-block;
+        position: relative;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 4px 24px;
+        background-color: var(--second-color);
+        color: var(--main-color);
+        font-size: 10px;
+    }
+
+    .information_contianer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 32px;
+    }
+
+    .information_texts {
+        text-align: center;
+    }
+    .information_texts *:first-child {
+        margin-bottom: 6px;
+    }
+
+    #table-header {
+        padding: 4px 0;
+        border: 2px solid var(--third-color);
+        background-color: var(--third-color);
+        color: var(--second-color);
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    #table-body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tbl-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 150px;
+        background-color: var(--main-color);
+        color: var(--second-color);
+    }
+
+    #one-col {
+        width: calc(50% - 2px);
+    }
+
+    .texts-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 2px solid var(--third-color);
+    }
+
+    .texts-container > * {
+        border-top: 1px solid var(--third-color);
+    }
+    .texts-container > *:first-child {
+        border-top: 0;
+    }
+
+    .row-title {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+    }
+
+    .row-title_two-col {
+        display: flex;
+    }
+    .row-title_two-col > *:first-child {
+        width: 40px;
+        flex-shrink: 0;
+        border-left: 1px solid var(--third-color);
+    }
+
+    .row-title span:first-child {
+        font-size: 6px;
+        padding-left: 2px;
+        border-left: 1px solid var(--third-color);
+    }
+    .row-title span:last-child {
+        font-size: 7px;
+        padding-right: 1px;
+    }
+
+    .texts-container > .row-title:first-child,
+    .texts-container > .row-title:last-child {
+        flex-grow: 1;
+    }
+
+    .images-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2px;
+        padding: 4px;
+    }
+
+    #vertical-img {
+        height: 95%;
+    }
+    #vertical-img img {
+        height: 100%;
+    }
+
+    #horizental-img {
+        width: 128px;
+    }
+
+    .empty-div {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    #table-container-text {
+        margin-bottom: 20px;
+    }
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        color: var(--second-color);
+        margin-top: 15px;
+    }
+    table:first-child {
+        margin-top: 0;
+    }
+    thead {
+        background-color: var(--third-color);
+    }
+    tbody {
+        margin-top: 10px;
+        background-color: var(--main-color);
+    }
+    th {
+        padding: 4px;
+        font-size: var(--font-sm);
+        border: 1px solid var(--main-color);
+    }
+    td {
+        padding: 2px;
+        font-size: 9px;
+        border: 1px solid var(--third-color);
+    }
+    </style>
+    <body dir="rtl">
+        <section class="p-2">
+            <div class="information">
+                <div class="information_contianer">
+                    <div class="information_texts">
+                        <p>سن</p>
+                        <p></p>
+                    </div>
+                    <div class="information_texts">
+                        <p>نام و نام خانوادگی</p>
+                        <p>2 مهدی حافظپور</p>
+                    </div>
+                    <div class="information_texts">
+                        <p>BMI</p>
+                        <p>22.1</p>
+                    </div>
+                </div>            
+            </div>
+            
+        
+        <div id="table-container-text">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="7">حرکات اصلاحی</th>
+                    </tr>
+                    <tr>
+                        <th>تمرین</th>
+                        <th>تکرار</th>
+                        <th>ست</th>
+                        <th>شدت</th>
+                        <th>ضرب آهنگ</th>
+                        <th>استراحت</th>
+                        <th>توضیحات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    
+                    <tr>
+                        <td>TFL</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Heel Slides (Slideboard + Belt)</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Halfway Lift - Hands on Knees</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Piriformis Stretch</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Hip Abduction - Side lying Straight leg</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Prone Knee Flexion - Early Range</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Step Down Touch</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Lateral Step down</td>
+                        <td>repeatations</td>
+                        <td>the_number_of_the_sets</td>
+                        <td>70-80%</td>
+                        <td>zarb_ahang</td>
+                        <td>rest_time</td>
+                        <td>سوپرست</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+            <div id="table-container">
+                
+                <div id="table-header">
+                    حرکات اصلاحی 
+                </div>
+                <div id="table-body">
+                    
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>TFL</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\1-Inhibit\TFL.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Heel Slides (Slideboard + Belt)</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides (Slideboard + Belt)_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Flexion\Heel Slides (Slideboard + Belt)_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Halfway Lift - Hands on Knees</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Halfway Lift - Hands on Knees_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Halfway Lift - Hands on Knees_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Piriformis Stretch</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Piriformis Stretch_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Piriformis Stretch_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\2-Lengthen\Internal Rotation\Piriformis Stretch_3.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Hip Abduction - Side lying Straight leg</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Abduction\Hip Abduction - Side lying Straight leg_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                <div class="empty-div" style="height: 65px">
+            </div>
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Prone Knee Flexion - Early Range</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Early Range\Prone Knee Flexion - Early Range_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Flexion\Early Range\Prone Knee Flexion - Early Range_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Step Down Touch</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Step Down Touch_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\3-Activation\Tensor Fascia Latae\Step Down Touch_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                
+                <div class="tbl-row">
+                
+                    <div class="texts-container">
+                        <span class="row-title">
+                            <span>تمرین</span>
+                            <span>Lateral Step down</span>
+                        </span>
+                        <div class="row-title_two-col">                       
+                            <span class="row-title">
+                                <span>تکرار</span>
+                                <span>repeatations</span>
+                            </span>
+                            <span class="row-title">
+                                <span>شدت</span>
+                                <span>70-80%</span>
+                            </span>
+                        </div>
+                        <div class="row-title_two-col">
+                            <span class="row-title">
+                                <span>ست</span>
+                                <span>the_number_of_the_sets</span>
+                            </span>
+                            <span class="row-title">
+                                <span>ضرب آهنگ</span>
+                                <span>zarb_ahang</span>
+                            </span>
+                        </div>
+                        <span class="row-title">
+                            <span>استراحت</span>
+                            <span>rest_time</span>
+                        </span>
+                        <span class="row-title">
+                            <span>توضیحات</span>
+                            <span>سوپر ست</span>
+                        </span>
+                    </div>
+            
+                
+                <div class="images-container">
+                
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step down_1.jpg" alt="exercise-pic">
+                        </div>
+                        
+                        <div id="horizental-img">
+                            <img src="..\.\Corrective\Genu Varum\4-Integrated\Lateral Step down_2.jpg" alt="exercise-pic">
+                        </div>
+                        
+                </div>
+                
+                </div>
+            
+                </div>
+            </div>
+            
+        </section>
+    </body>
+    </html>
