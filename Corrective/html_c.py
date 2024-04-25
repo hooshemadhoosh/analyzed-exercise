@@ -439,7 +439,6 @@ for person_data in data:
     main_html_text = pure_html_code
     genderofperson = gender[data[person_data]['gender']]
     nameofperson = genderofperson + " " + str(person_data[2:])
-    print (nameofperson)
     main_html_text = replacing('PUT_PERSON_NAME_HERE!' , nameofperson , main_html_text)
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
     if data[person_data]['وزن'] != '' and data[person_data]['قد']!='':
@@ -464,7 +463,6 @@ for person_data in data:
             this_row_tag = ''''''
             if exercise[1][0] in corrective_names:  name_of_excercise = corrective_names[exercise[1][0]]
             else: name_of_excercise = exercise[1][0]
-            print (name_of_excercise)
             txt_row_tag = replacing('exercise_name' , name_of_excercise , txt_row_tag)
             information_tag = replacing('exna1' , name_of_excercise , information_tag)
             # THESE ARE TAGS TO ADD INFORMATION OF PHASES IN HTML TAGS
