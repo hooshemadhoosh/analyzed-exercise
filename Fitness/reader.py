@@ -5,7 +5,7 @@ import pickle
 from os import listdir
 import random
 
-root = "Fitness_Backup\\"
+root = "Fitness\\"
 kind = {'A':"Cardio" , 'B' : 'Core' , 'C': 'Balance', 'D': 'Whole body' , 'E': 'Strengthing' , 'F': 'Stretching'}
 level = {'Beginner':0,'Intermediate':1,'Advanced':2}
 person_level = {'بی تحرک':('Beginner' , 'Beginner') ,
