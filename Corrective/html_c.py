@@ -324,6 +324,7 @@ source_txt_row_tag = '''
                     '''
 
 day = {0:'روز اول' , 1: 'روز دوم' , 2:'روز سوم'  , 3:'روز چهارم'  , 4:"روز پنجم"}
+gender = {'1':'سر کار خانم' , '2':'جناب آقای' , '':''}
 #physical_activity = {"مقدار تحرک":(listindex , level)}
 def load_object(filename):
     try:
@@ -426,10 +427,9 @@ def height_checker(final_html_str : str):
             final_html_str = final_html_str.replace(final_html_str[start:end] , '' , 1)
     return final_html_str
 
-#phases = load_object('./Phase/Phase 1')
+phases = load_object('./phase/Phase 1')
 data = load_object('data')
 corrective_names = load_object('CorrectiveNamesObject')
-print (corrective_names)
 #print (data)
 #repeattions = 0
 for person_data in data:
@@ -437,33 +437,41 @@ for person_data in data:
     # print ("repeated times:" , repeattions)
     # print (data[person_data])
     main_html_text = pure_html_code
-    main_html_text = replacing('PUT_PERSON_NAME_HERE!' , str(person_data) , main_html_text)
+    genderofperson = gender[data[person_data]['gender']]
+    nameofperson = genderofperson + " " + str(person_data[2:])
+    main_html_text = replacing('PUT_PERSON_NAME_HERE!' , nameofperson , main_html_text)
     main_html_text = replacing('PUT_AGE_HERE!' , str(data[person_data]['سن']) , main_html_text)
     if data[person_data]['وزن'] != '' and data[person_data]['قد']!='':
         weight = float(data[person_data]['وزن'])
         height = float(data[person_data]['قد'])/100
         bmi_value = round(weight/height**2,1)
         main_html_text = replacing('PUT_BMI_VALUE_HERE!' , str(bmi_value) , main_html_text)
-    main_html_text = chang_color(main_html_text , data[person_data]['gender'])
+    
+    main_html_text = chang_color(main_html_text , genderofperson)
     exercise_program = data[person_data]['Program']
+    exercise_program2 = [i for x in exercise_program for i in x]
+    # print (data[person_data]['PERSON_LEVEL'])
+    # print (len(exercise_program))
     text_table_tag = txt_table_container
     img_table_tag = container_of_img_table_tags
     rows_tag = ''''''
     all_txt_row_tag = ''''''
-    for ttype in exercise_program[0]:
+    for ttype in exercise_program2:
         for exercise in ttype:
             txt_row_tag = source_txt_row_tag
             information_tag = information_in_row
             this_row_tag = ''''''
-            txt_row_tag = replacing('exercise_name' , exercise[1][0] , txt_row_tag)
-            information_tag = replacing('exna1' , exercise[1][0] , information_tag)
+            if exercise[1][0] in corrective_names:  name_of_excercise = corrective_names[exercise[1][0]]
+            else: name_of_excercise = exercise[1][0]
+            txt_row_tag = replacing('exercise_name' , name_of_excercise , txt_row_tag)
+            information_tag = replacing('exna1' , name_of_excercise , information_tag)
             # THESE ARE TAGS TO ADD INFORMATION OF PHASES IN HTML TAGS
-            # type_exe = exercise[1][0].split('\\')[1]
-            # dict_this_type = phases[type_exe]
-            # information_tag , txt_row_tag = replacing('repeatations' , str(dict_this_type['تکرار']) , information_tag) , replacing('repeatations' , str(dict_this_type['تکرار']) , txt_row_tag)
-            # information_tag , txt_row_tag = replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , information_tag) , replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , txt_row_tag)
-            # information_tag , txt_row_tag = replacing('rest_time' , str(dict_this_type['استراحت']) , information_tag) , replacing('rest_time' , str(dict_this_type['استراحت']) , txt_row_tag)
-            # information_tag , txt_row_tag = replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , information_tag) , replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , txt_row_tag) 
+            type_exe = exercise[0].split('\\')[2]
+            dict_this_type = phases[type_exe]
+            information_tag , txt_row_tag = replacing('repeatations' , str(dict_this_type['تکرار']) , information_tag) , replacing('repeatations' , str(dict_this_type['تکرار']) , txt_row_tag)
+            information_tag , txt_row_tag = replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , information_tag) , replacing('the_number_of_the_sets' , str(dict_this_type['ست']) , txt_row_tag)
+            information_tag , txt_row_tag = replacing('rest_time' , str(dict_this_type['استراحت']) , information_tag) , replacing('rest_time' , str(dict_this_type['استراحت']) , txt_row_tag)
+            information_tag , txt_row_tag = replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , information_tag) , replacing('zarb_ahang' , str(dict_this_type['ضرب آهنگ']) , txt_row_tag) 
             addresses = [os.path.join('.\\' , exercise[0] , i) for i in exercise[1][1]]
             this_row_tag += f'''
                 height=150
@@ -478,7 +486,7 @@ for person_data in data:
     text_table_tag = replacing('PUT_ALL_TXT_ROWS_HERE' , all_txt_row_tag , text_table_tag)
     all_tables = text_table_tag + img_table_tag
     main_html_text = replacing('PUT ALL TABLES HERE!' , all_tables , main_html_text)
-    if data[person_data]['gender'] != 'میانگین':
+    if data[person_data]['gender'] != '':
         main_html_text = height_checker(main_html_text)
         file_name = str(person_data).replace(' ' , '_' )
         with open("sport-program-build\\" + f'{file_name}.html' , 'w' , encoding='utf-8') as f:
