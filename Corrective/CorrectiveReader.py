@@ -88,7 +88,7 @@ def get_programs(static,dynamic,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),
         res = []
         pro = program[level[lev]]
         for j in range(len(pro)//2):
-            exer_name = translate[exer[i]].replace('_','\\')
+            exer_name = translate[exer[i]]
             # exer_name = "Genu Varum"
             res.append(random_name_list(int(pro[2*j]),f'{root}\\{exer_name}\\{kind[pro[2*j+1]]}'))
         result.append(res)

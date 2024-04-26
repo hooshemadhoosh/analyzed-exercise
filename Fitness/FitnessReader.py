@@ -71,7 +71,7 @@ def get_programs(bmi,pers_level): #[[(,),(,),...],[(,),(,),...],[(,),(,),...],..
         for j in range(len(pro)//2):
             name_picture_pair = dirs[pro[2*j+1]+lev]
             
-            res += [random.choices(name_picture_pair, k=int(pro[2*j]) )] if len(name_picture_pair)<int(pro[2*j]) else [random.sample(name_picture_pair,k=int(pro[2*j]))]
+            if len(name_picture_pair):  res += [random.choices(name_picture_pair, k=int(pro[2*j]) )] if len(name_picture_pair)<int(pro[2*j]) else [random.sample(name_picture_pair,k=int(pro[2*j]))]
         result.append(res)
     return result
 

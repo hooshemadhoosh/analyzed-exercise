@@ -1,5 +1,4 @@
 #Add C:\Program Files (x86)\Google\Chrome\Application to PATH Environment Variable then run the program
-#بسمبستم
 from subprocess import Popen,PIPE
 from os import listdir
 import tkinter as tk
